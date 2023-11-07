@@ -1,0 +1,105 @@
+﻿<Window x:Class="LearningManagementSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LearningManagementSystem"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="600" Width="1000">
+    <Border
+        Background="{DynamicResource FirstColor}"
+        CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Grid
+                Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+
+                <Border
+                    Grid.Column="0"
+                    Name="MouseDragable"
+                    MouseDown="MouseDragable_MouseDown"
+                    Cursor="Hand"
+                    Background="Transparent">
+                </Border>
+                
+                <StackPanel
+                    Orientation="Horizontal"
+                    Grid.Column="1">
+                    
+                    <Button x:Name="btnMinus" Click="btnMinus_Click" Style="{DynamicResource MinimizedButton}"/>
+                    <Button x:Name="btnMaximize" Click="btnMaximize_Click" Style="{DynamicResource MaximizedButton}"/>
+                    <Button x:Name="btnClose" Click="btnClose_Click" Style="{DynamicResource ClosedButton}"/>
+
+                </StackPanel>
+                
+            </Grid>
+
+            <Grid
+                Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel
+                    Margin="0 50 0 0"
+                    Grid.Column="0">
+
+                    <RadioButton 
+                            x:Name="rbDashboard"
+                            Content="Dashboard"
+                            Click="rbDashboard_Click"
+                            Style="{DynamicResource MenuButton}" 
+                            Tag="{DynamicResource dashboard}"/>
+                    <RadioButton 
+                            x:Name="rbTeacher"
+                            Content="Teachers"
+                            Click="rbDashboard_Click"
+                            Style="{DynamicResource MenuButton}" 
+                            Tag="{DynamicResource dashboard}"/>
+                    <RadioButton 
+                            x:Name="rbCourse"
+                            Content="Courses"
+                            Click="rbDashboard_Click"
+                            Style="{DynamicResource MenuButton}" 
+                            Tag="{DynamicResource dashboard}"/>
+                    <RadioButton 
+                            x:Name="rbStudent"
+                            Content="Students"
+                            Click="rbDashboard_Click"
+                            Style="{DynamicResource MenuButton}" 
+                            Tag="{DynamicResource dashboard}"/>
+                    <RadioButton 
+                            x:Name="rbPayment"
+                            Content="Payment"
+                            Click="rbDashboard_Click"
+                            Style="{DynamicResource MenuButton}" 
+                            Tag="{DynamicResource dashboard}"/>
+
+                </StackPanel>
+
+                <Border
+                    Grid.Column="1"
+                    CornerRadius="0 0 10 0"
+                    Background="{DynamicResource SecondColor}">
+                    
+                </Border>
+                
+            </Grid>
+            
+        </Grid>
+        
+    </Border>
+</Window>
