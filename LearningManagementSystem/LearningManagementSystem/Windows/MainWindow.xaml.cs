@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearningManagementSystem.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,6 +46,18 @@ namespace LearningManagementSystem
         }
 
         private void rbDashboard_Click(object sender, RoutedEventArgs e)
+        {
+            DashboardPage dashboardPage = new DashboardPage();
+            PageNavigator.Content = dashboardPage;
+        }
+
+        private void rbTeacher_Click(object sender, RoutedEventArgs e)
+        {
+            TeacherPage teacherPage = new TeacherPage();
+            PageNavigator.Content = teacherPage;    
+        }
+
+        private void rbCourse_Click(object sender, RoutedEventArgs e)
         {
 
         }

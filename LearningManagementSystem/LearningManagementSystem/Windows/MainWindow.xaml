@@ -66,13 +66,13 @@
                     <RadioButton 
                             x:Name="rbTeacher"
                             Content="Teachers"
-                            Click="rbDashboard_Click"
+                            Click="rbTeacher_Click"
                             Style="{DynamicResource MenuButton}" 
                             Tag="{DynamicResource dashboard}"/>
                     <RadioButton 
                             x:Name="rbCourse"
                             Content="Courses"
-                            Click="rbDashboard_Click"
+                            Click="rbCourse_Click"
                             Style="{DynamicResource MenuButton}" 
                             Tag="{DynamicResource dashboard}"/>
                     <RadioButton 
@@ -94,7 +94,10 @@
                     Grid.Column="1"
                     CornerRadius="0 0 10 0"
                     Background="{DynamicResource SecondColor}">
-                    
+                    <Frame
+                        Name="PageNavigator"
+                        NavigationUIVisibility="Hidden"/>
+
                 </Border>
                 
             </Grid>
