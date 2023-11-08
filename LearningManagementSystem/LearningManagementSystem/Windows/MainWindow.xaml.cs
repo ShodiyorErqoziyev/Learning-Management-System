@@ -59,7 +59,20 @@ namespace LearningManagementSystem
 
         private void rbCourse_Click(object sender, RoutedEventArgs e)
         {
+            CoursePage coursePage = new CoursePage();
+            PageNavigator.Content = coursePage;
+        }
 
+        private void rbStudent_Click(object sender, RoutedEventArgs e)
+        {
+            StudentPage studentPage = new StudentPage();
+            PageNavigator.Content = studentPage;
+        }
+
+        private void rbPayment_Click(object sender, RoutedEventArgs e)
+        {
+            PaymentPage paymentPage = new PaymentPage();
+            PageNavigator.Content = paymentPage;
         }
     }
 }

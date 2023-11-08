@@ -78,13 +78,13 @@
                     <RadioButton 
                             x:Name="rbStudent"
                             Content="Students"
-                            Click="rbDashboard_Click"
+                            Click="rbStudent_Click"
                             Style="{DynamicResource MenuButton}" 
                             Tag="{DynamicResource dashboard}"/>
                     <RadioButton 
                             x:Name="rbPayment"
                             Content="Payment"
-                            Click="rbDashboard_Click"
+                            Click="rbPayment_Click"
                             Style="{DynamicResource MenuButton}" 
                             Tag="{DynamicResource dashboard}"/>
 
