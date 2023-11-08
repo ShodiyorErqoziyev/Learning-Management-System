@@ -74,5 +74,10 @@ namespace LearningManagementSystem
             PaymentPage paymentPage = new PaymentPage();
             PageNavigator.Content = paymentPage;
         }
+
+        private void rbGroups_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

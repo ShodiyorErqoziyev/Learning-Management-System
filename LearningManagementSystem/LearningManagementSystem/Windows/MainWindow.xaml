@@ -70,6 +70,12 @@
                             Style="{DynamicResource MenuButton}" 
                             Tag="{DynamicResource dashboard}"/>
                     <RadioButton 
+                            x:Name="rbGroups"
+                            Content="Groups"
+                            Click="rbGroups_Click"
+                            Style="{DynamicResource MenuButton}" 
+                            Tag="{DynamicResource dashboard}"/>
+                    <RadioButton 
                             x:Name="rbCourse"
                             Content="Courses"
                             Click="rbCourse_Click"
