@@ -9,7 +9,7 @@
         AllowsTransparency="True"
         Background="Transparent"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="600" Width="1000">
+        Title="MainWindow" Height="700" Width="1100">
     <Border
         Background="{DynamicResource FirstColor}"
         CornerRadius="10">
@@ -49,7 +49,7 @@
             <Grid
                 Grid.Row="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="300"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
@@ -64,35 +64,35 @@
                             Style="{DynamicResource MenuButton}" 
                             Tag="{DynamicResource dashboard}"/>
                     <RadioButton 
-                            x:Name="rbTeacher"
-                            Content="Teachers"
-                            Click="rbTeacher_Click"
-                            Style="{DynamicResource MenuButton}" 
-                            Tag="{DynamicResource dashboard}"/>
-                    <RadioButton 
                             x:Name="rbGroups"
                             Content="Groups"
                             Click="rbGroups_Click"
                             Style="{DynamicResource MenuButton}" 
-                            Tag="{DynamicResource dashboard}"/>
+                            Tag="{DynamicResource group}"/>
                     <RadioButton 
                             x:Name="rbCourse"
                             Content="Courses"
                             Click="rbCourse_Click"
                             Style="{DynamicResource MenuButton}" 
-                            Tag="{DynamicResource dashboard}"/>
+                            Tag="{DynamicResource course}"/>
+                    <RadioButton 
+                            x:Name="rbTeacher"
+                            Content="Teachers"
+                            Click="rbTeacher_Click"
+                            Style="{DynamicResource MenuButton}" 
+                            Tag="{DynamicResource teacher}"/>
                     <RadioButton 
                             x:Name="rbStudent"
                             Content="Students"
                             Click="rbStudent_Click"
                             Style="{DynamicResource MenuButton}" 
-                            Tag="{DynamicResource dashboard}"/>
+                            Tag="{DynamicResource student}"/>
                     <RadioButton 
                             x:Name="rbPayment"
                             Content="Payment"
                             Click="rbPayment_Click"
                             Style="{DynamicResource MenuButton}" 
-                            Tag="{DynamicResource dashboard}"/>
+                            Tag="{DynamicResource payment}"/>
 
                 </StackPanel>
 

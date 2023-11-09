@@ -3,8 +3,8 @@
     
     <SolidColorBrush x:Key="FirstColor" Color="White"/>
     <SolidColorBrush x:Key="SecondColor" Color="#F7F7F7"/>
-    <SolidColorBrush x:Key="TheerdColor" Color="#0F9799"/>
-    <SolidColorBrush x:Key="FourthColor" Color="#75E1E3"/>
+    <SolidColorBrush x:Key="TheerdColor" Color="#13BABD"/>
+    <SolidColorBrush x:Key="FourthColor" Color="#88E1E3"/>
 
     <SolidColorBrush x:Key="BorderColor" Color="#677272"/>
 
