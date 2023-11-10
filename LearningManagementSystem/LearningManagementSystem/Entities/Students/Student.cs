@@ -1,8 +1,8 @@
-﻿using System.Security.Principal;
+﻿using System.Collections.Generic;
 
 namespace LearningManagementSystem.Entities;
 
 public class Student : Human
 {
-    public long GroupId { get; set; }
+    public virtual List<Course> Courses { get; set; } = new List<Course>();
 }
