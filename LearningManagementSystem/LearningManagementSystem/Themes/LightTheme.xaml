@@ -6,6 +6,6 @@
     <SolidColorBrush x:Key="TheerdColor" Color="#13BABD"/>
     <SolidColorBrush x:Key="FourthColor" Color="#88E1E3"/>
 
-    <SolidColorBrush x:Key="BorderColor" Color="#677272"/>
+    <SolidColorBrush x:Key="BorderColor" Color="#383838"/>
 
 </ResourceDictionary>

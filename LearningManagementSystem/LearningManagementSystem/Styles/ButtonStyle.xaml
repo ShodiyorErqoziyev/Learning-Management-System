@@ -111,37 +111,24 @@
 
     <Style x:Key="MenuButton" TargetType="{x:Type RadioButton}">
         <Setter Property="Height" Value="45"/>
-        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="250"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="FontSize" Value="16"/>
-        <Setter Property="Margin" Value="0 3 0 3"/>
+        <Setter Property="Margin" Value="15 3 0 3"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
                     <Border x:Name="B" CornerRadius="5">
                         <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="6"/>
-                                <ColumnDefinition Width="15"/>
-                                <ColumnDefinition Width="180"/>
-                            </Grid.ColumnDefinitions>
-                            <Border x:Name="Indicator" Grid.Column="0"
-                                    Height="45"
-                                    CornerRadius="5"
-                                    Visibility="Collapsed"
-                                    Background="{DynamicResource TheerdColor}"/>
-                            <Border 
-                                Grid.Column="1"
-                                Background="Transparent">
-                            </Border>
 
                             <Border
-                                Grid.Column="2"
                                 CornerRadius="5"
                                 x:Name="IconPath">
                                 <Grid >
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="20"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
@@ -154,7 +141,7 @@
                                         Stretch="Uniform"/>
 
                                     <Label 
-                                       Grid.Column="1"
+                                       Grid.Column="2"
                                        x:Name="Label"
                                        FontSize="{TemplateBinding FontSize}"
                                        Content="{TemplateBinding Content}"
@@ -178,12 +165,83 @@
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="IconPath" Property="Background" Value="{DynamicResource TheerdColor}"/>
-                            <Setter TargetName="Indicator" Property="Visibility" Value="Visible"/>
                             <Setter TargetName="Label" Property="Foreground" Value="{DynamicResource FirstColor}"/>
                             <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource FirstColor}"/>
                         </Trigger>
 
                     </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PathButton" TargetType="{x:Type RadioButton}">
+        <Setter Property="Height" Value="45"/>
+        <Setter Property="Width" Value="45"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="13 3 0 3"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border x:Name="B" CornerRadius="5">
+
+                        <Path 
+                            Grid.Column="0"
+                            x:Name="Icon" 
+                            Data="{Binding Tag, RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}}"
+                            Fill="{DynamicResource BorderColor}"
+                            Height="20"
+                            Stretch="Uniform"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="B" Property="Background" Value="Transparent"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="{DynamicResource FourthColor}"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="toggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border
+                        x:Name="border"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding Background}"
+                        SnapsToDevicePixels="True">
+
+                        <Path
+                                Width="25"
+                                Height="25"
+                                Stretch="Uniform"
+                                Data="{DynamicResource menu}"
+                                Fill="{DynamicResource BorderColor}"/>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource FourthColor}" />
+
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+
+                            <Setter Property="Background" TargetName="border" Value="Transparent" />
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

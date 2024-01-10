@@ -49,52 +49,179 @@
             <Grid
                 Grid.Row="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <StackPanel
-                    Margin="0 50 0 0"
-                    Grid.Column="0">
+                <Grid
+                    x:Name="nav_pnl"
+                    Grid.Column="0"
+                    HorizontalAlignment="Left"
+                    Width="70">
 
-                    <RadioButton 
-                            x:Name="rbDashboard"
-                            Content="Dashboard"
-                            Click="rbDashboard_Click"
-                            Style="{DynamicResource MenuButton}" 
-                            Tag="{DynamicResource dashboard}"/>
-                    <RadioButton 
-                            x:Name="rbGroups"
-                            Content="Groups"
-                            Click="rbGroups_Click"
-                            Style="{DynamicResource MenuButton}" 
-                            Tag="{DynamicResource group}"/>
-                    <RadioButton 
-                            x:Name="rbCourse"
-                            Content="Courses"
-                            Click="rbCourse_Click"
-                            Style="{DynamicResource MenuButton}" 
-                            Tag="{DynamicResource course}"/>
-                    <RadioButton 
-                            x:Name="rbTeacher"
-                            Content="Teachers"
-                            Click="rbTeacher_Click"
-                            Style="{DynamicResource MenuButton}" 
-                            Tag="{DynamicResource teacher}"/>
-                    <RadioButton 
-                            x:Name="rbStudent"
-                            Content="Students"
-                            Click="rbStudent_Click"
-                            Style="{DynamicResource MenuButton}" 
-                            Tag="{DynamicResource student}"/>
-                    <RadioButton 
-                            x:Name="rbPayment"
-                            Content="Payment"
-                            Click="rbPayment_Click"
-                            Style="{DynamicResource MenuButton}" 
-                            Tag="{DynamicResource payment}"/>
+                    <StackPanel
+                    x:Name="st_pnl"
+                    Orientation="Vertical">
 
-                </StackPanel>
+                        <StackPanel
+                        Orientation="Horizontal"
+                        Height="90">
+
+                            <ToggleButton   
+                                 Margin="13 0 0 0"
+                                 Width="45"
+                                 Height="45"
+                                 x:Name="tg_btn_menu"
+                                 BorderThickness="0"
+                                 Background="Transparent"
+                                Click="tg_btn_menu_Click"
+                                 Style="{DynamicResource toggleButton}">
+
+                                <ToggleButton.Triggers>
+
+                                    <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+
+                                        <BeginStoryboard>
+
+                                            <Storyboard x:Name="HideStackPanel">
+
+                                                <DoubleAnimation
+                                                Storyboard.TargetName="nav_pnl"
+                                                Storyboard.TargetProperty="Width"
+                                                BeginTime="0:0:0"
+                                                From="280" To="70"
+                                                Duration="0:0:0.2">
+
+                                                </DoubleAnimation>
+
+                                            </Storyboard>
+
+                                        </BeginStoryboard>
+
+                                    </EventTrigger>
+
+                                    <EventTrigger RoutedEvent="ToggleButton.Checked">
+
+                                        <BeginStoryboard>
+
+                                            <Storyboard x:Name="ShowStackPanel">
+
+                                                <DoubleAnimation
+                                                    Storyboard.TargetName="nav_pnl"
+                                                    Storyboard.TargetProperty="Width"
+                                                    BeginTime="0:0:0"
+                                                    From="70" To="280"
+                                                    Duration="0:0:0.3">
+
+                                                </DoubleAnimation>
+
+                                            </Storyboard>
+
+                                        </BeginStoryboard>
+
+                                    </EventTrigger>
+
+                                </ToggleButton.Triggers>
+
+                            </ToggleButton>
+
+                            <TextBlock
+                                Text="M E N U"
+                                Foreground="{DynamicResource BorderColor}"
+                                FontSize="22"
+                                Background="Transparent"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                FontWeight="SemiBold"
+                                Margin="25 0 0 0">
+
+                            </TextBlock>
+                            
+                        </StackPanel>
+
+                        <StackPanel
+                            Visibility="Visible"
+                            HorizontalAlignment="Left"
+                            Width="70"
+                            x:Name="Path_Stp"
+                            Margin="0 30 0 0"
+                            Orientation="Vertical">
+
+                            <RadioButton
+                                Click="rbDashboard_Click"
+                                Style="{DynamicResource PathButton}"
+                                Tag="{DynamicResource dashboard}"/>
+                            <RadioButton
+                                Click="rbGroups_Click"
+                                Style="{DynamicResource PathButton}"
+                                Tag="{DynamicResource group}"/>
+                            <RadioButton
+                                Click="rbCourse_Click"
+                                Style="{DynamicResource PathButton}"
+                                Tag="{DynamicResource course}"/>
+                            <RadioButton
+                                Click="rbTeacher_Click"
+                                Style="{DynamicResource PathButton}"
+                                Tag="{DynamicResource teacher}"/>
+                            <RadioButton
+                                Click="rbStudent_Click"
+                                Style="{DynamicResource PathButton}"
+                                Tag="{DynamicResource student}"/>
+                            <RadioButton
+                                Click="rbPayment_Click"
+                                Style="{DynamicResource PathButton}"
+                                Tag="{DynamicResource payment}"/>
+
+                        </StackPanel>
+
+                        <StackPanel
+                            x:Name="Menu_Stp"
+                            Orientation="Vertical"
+                            Visibility="Collapsed"
+                            Margin="0 30 0 0">
+                            <RadioButton 
+                                x:Name="rbDashboard"
+                                Content="Dashboard"
+                                Click="rbDashboard_Click"
+                                Style="{DynamicResource MenuButton}" 
+                                Tag="{DynamicResource dashboard}"/>
+
+                            <RadioButton 
+                                x:Name="rbGroups"
+                                Content="Groups"
+                                Click="rbGroups_Click"
+                                Style="{DynamicResource MenuButton}" 
+                                Tag="{DynamicResource group}"/>
+
+                            <RadioButton 
+                                x:Name="rbCourse"
+                                Content="Courses"
+                                Click="rbCourse_Click"
+                                Style="{DynamicResource MenuButton}" 
+                                Tag="{DynamicResource course}"/>
+                            <RadioButton 
+                                x:Name="rbTeacher"
+                                Content="Teachers"
+                                Click="rbTeacher_Click"
+                                Style="{DynamicResource MenuButton}" 
+                                Tag="{DynamicResource teacher}"/>
+                            <RadioButton 
+                                x:Name="rbStudent"
+                                Content="Students"
+                                Click="rbStudent_Click"
+                                Style="{DynamicResource MenuButton}" 
+                                Tag="{DynamicResource student}"/>
+                            <RadioButton
+                                x:Name="rbPayment"
+                                Content="Payment"
+                                Click="rbPayment_Click"
+                                Style="{DynamicResource MenuButton}" 
+                                Tag="{DynamicResource payment}"/>
+                        </StackPanel>
+                    </StackPanel>
+
+
+                </Grid>
 
                 <Border
                     Grid.Column="1"
@@ -102,7 +229,7 @@
                     Background="{DynamicResource SecondColor}">
                     <Frame
                         Name="PageNavigator"
-                        NavigationUIVisibility="Hidden"/>
+                        NavigationUIVisibility="Hidden" Content=""/>
 
                 </Border>
                 

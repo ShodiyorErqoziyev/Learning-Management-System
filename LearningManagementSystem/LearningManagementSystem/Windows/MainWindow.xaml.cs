@@ -77,7 +77,22 @@ namespace LearningManagementSystem
 
         private void rbGroups_Click(object sender, RoutedEventArgs e)
         {
+            Groups groups = new Groups();
+            PageNavigator.Content = groups;
+        }
 
+        private void tg_btn_menu_Click(object sender, RoutedEventArgs e)
+        {
+            if(tg_btn_menu.IsChecked == true)
+            {
+                Menu_Stp.Visibility = Visibility.Visible;
+                Path_Stp.Visibility= Visibility.Collapsed;
+            }
+            else
+            {
+                Menu_Stp.Visibility = Visibility.Collapsed;
+                Path_Stp.Visibility = Visibility.Visible;
+            }
         }
     }
 }
