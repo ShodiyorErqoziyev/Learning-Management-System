@@ -65,7 +65,7 @@
 
                         <StackPanel
                         Orientation="Horizontal"
-                        Height="90">
+                        Height="50">
 
                             <ToggleButton   
                                  Margin="13 0 0 0"
@@ -125,18 +125,39 @@
 
                             </ToggleButton>
 
-                            <TextBlock
-                                Text="M E N U"
-                                Foreground="{DynamicResource BorderColor}"
-                                FontSize="22"
-                                Background="Transparent"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                                FontWeight="SemiBold"
-                                Margin="25 0 0 0">
+                            <StackPanel
+                                Margin="140 0 0 0"
+                                HorizontalAlignment="Right"
+                                Grid.Column="1"
+                                Orientation="Horizontal">
+                                <Grid
+                                    Width="25">
+                                    <Path
+                                        x:Name="IconSun" 
+                                        Data="{DynamicResource quyosh}"
+                                        Fill="{DynamicResource BorderColor}"
+                                        Height="17"
+                                        Stretch="Uniform"/>
+                                </Grid>
+                                <CheckBox 
+                                    x:Name="chkbox" 
+                                    Margin="0 5 0 0"      
+                                    Style="{DynamicResource SwitchButton}" 
+                                    VerticalAlignment="Center"
+                                    Click="IsChecked" 
+                                    Height="20"
+                                    Width="30"/>
+                                <Grid
+                                    Width="25">
+                                    <Path 
+                                        x:Name="IconMun"
+                                        Data="{DynamicResource oy}"
+                                        Fill="{DynamicResource BorderColor}"
+                                        Height="15"
+                                        Stretch="Uniform"/>
+                                </Grid>
+                            </StackPanel>
 
-                            </TextBlock>
-                            
                         </StackPanel>
 
                         <StackPanel
@@ -144,7 +165,7 @@
                             HorizontalAlignment="Left"
                             Width="70"
                             x:Name="Path_Stp"
-                            Margin="0 30 0 0"
+                            Margin="0 50 0 0"
                             Orientation="Vertical">
 
                             <RadioButton
@@ -178,7 +199,8 @@
                             x:Name="Menu_Stp"
                             Orientation="Vertical"
                             Visibility="Collapsed"
-                            Margin="0 30 0 0">
+                            Margin="0 50 0 0">
+                            
                             <RadioButton 
                                 x:Name="rbDashboard"
                                 Content="Dashboard"
@@ -199,27 +221,31 @@
                                 Click="rbCourse_Click"
                                 Style="{DynamicResource MenuButton}" 
                                 Tag="{DynamicResource course}"/>
+                            
                             <RadioButton 
                                 x:Name="rbTeacher"
                                 Content="Teachers"
                                 Click="rbTeacher_Click"
                                 Style="{DynamicResource MenuButton}" 
                                 Tag="{DynamicResource teacher}"/>
+                            
                             <RadioButton 
                                 x:Name="rbStudent"
                                 Content="Students"
                                 Click="rbStudent_Click"
                                 Style="{DynamicResource MenuButton}" 
                                 Tag="{DynamicResource student}"/>
+                            
                             <RadioButton
                                 x:Name="rbPayment"
                                 Content="Payment"
                                 Click="rbPayment_Click"
                                 Style="{DynamicResource MenuButton}" 
                                 Tag="{DynamicResource payment}"/>
+                            
                         </StackPanel>
-                    </StackPanel>
 
+                    </StackPanel>
 
                 </Grid>
 

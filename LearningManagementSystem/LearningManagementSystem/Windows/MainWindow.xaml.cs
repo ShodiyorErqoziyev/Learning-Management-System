@@ -1,18 +1,8 @@
 ﻿using LearningManagementSystem.Pages;
+using LearningManagementSystem.Themes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace LearningManagementSystem
 {
@@ -79,6 +69,19 @@ namespace LearningManagementSystem
         {
             Groups groups = new Groups();
             PageNavigator.Content = groups;
+        }
+
+        private void IsChecked(object sender, RoutedEventArgs e)
+        {
+            if (chkbox.IsChecked == true)
+            {
+                AppTheme.ChangeTheme(new Uri("Themes/DarkTheme.xaml", UriKind.Relative));
+
+            }
+            else
+            {
+                AppTheme.ChangeTheme(new Uri("Themes/LightTheme.xaml", UriKind.Relative));
+            }
         }
 
         private void tg_btn_menu_Click(object sender, RoutedEventArgs e)

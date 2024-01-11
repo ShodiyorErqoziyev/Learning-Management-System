@@ -7,5 +7,6 @@
     <SolidColorBrush x:Key="FourthColor" Color="#88E1E3"/>
 
     <SolidColorBrush x:Key="BorderColor" Color="#383838"/>
+    <SolidColorBrush x:Key="LabelColor" Color="White"/>
 
 </ResourceDictionary>
