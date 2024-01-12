@@ -163,7 +163,7 @@
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="IconPath" Property="Background" Value="{DynamicResource TheerdColor}"/>
                             <Setter TargetName="Label" Property="Foreground" Value="{DynamicResource LabelColor}"/>
-                            <Setter TargetName="Label" Property="FontSize" Value="20"/>
+                            <Setter TargetName="Label" Property="FontSize" Value="21"/>
                             <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource LabelColor}"/>
                         </Trigger>
 
