@@ -8,6 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Interfaces\Courses\" />
+    <Folder Include="Interfaces\Lessons\" />
+    <Folder Include="Interfaces\Teachers\" />
+    <Folder Include="Interfaces\Subjects\" />
+    <Folder Include="Interfaces\Students\" />
+    <Folder Include="Interfaces\Payments\" />
+    <Folder Include="Repositories\Courses\" />
+    <Folder Include="Repositories\Lessons\" />
+    <Folder Include="Repositories\Payments\" />
+    <Folder Include="Repositories\Students\" />
+    <Folder Include="Repositories\Subjects\" />
+    <Folder Include="Repositories\Teachers\" />
     <Folder Include="Security\" />
   </ItemGroup>
 
