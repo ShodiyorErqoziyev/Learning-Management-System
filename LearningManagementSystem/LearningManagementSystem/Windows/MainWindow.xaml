@@ -172,10 +172,10 @@
                                 Click="rbDashboard_Click"
                                 Style="{DynamicResource PathButton}"
                                 Tag="{DynamicResource dashboard}"/>
-                            <RadioButton
+                            <!--<RadioButton
                                 Click="rbGroups_Click"
                                 Style="{DynamicResource PathButton}"
-                                Tag="{DynamicResource group}"/>
+                                Tag="{DynamicResource group}"/>-->
                             <RadioButton
                                 Click="rbCourse_Click"
                                 Style="{DynamicResource PathButton}"
@@ -208,12 +208,12 @@
                                 Style="{DynamicResource MenuButton}" 
                                 Tag="{DynamicResource dashboard}"/>
 
-                            <RadioButton 
+                            <!--<RadioButton 
                                 x:Name="rbGroups"
                                 Content="Groups"
                                 Click="rbGroups_Click"
                                 Style="{DynamicResource MenuButton}" 
-                                Tag="{DynamicResource group}"/>
+                                Tag="{DynamicResource group}"/>-->
 
                             <RadioButton 
                                 x:Name="rbCourse"

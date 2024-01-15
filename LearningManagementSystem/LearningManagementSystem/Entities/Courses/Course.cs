@@ -9,6 +9,7 @@ public class Course : Auditable
     public virtual Subject Subject { get; set; } = new Subject();
     public long TeacherId { get; set; }
     public virtual Teacher Teacher { get; set; } = new Teacher();
+    public string Status { get; set; } = string.Empty;
     public DateOnly StartAt { get; set; }
     public int LessonCount { get; set; }
     public int StudentCount { get; set; }

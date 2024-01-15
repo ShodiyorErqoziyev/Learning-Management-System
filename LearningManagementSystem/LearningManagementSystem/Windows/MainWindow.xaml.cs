@@ -67,8 +67,7 @@ namespace LearningManagementSystem
 
         private void rbGroups_Click(object sender, RoutedEventArgs e)
         {
-            Groups groups = new Groups();
-            PageNavigator.Content = groups;
+            // Hozircha commentga olib qo'ydim. Kerak bo'lsa ishlataman
         }
 
         private void IsChecked(object sender, RoutedEventArgs e)
