@@ -10,7 +10,7 @@
 
     <Grid
         Margin="20"
-        Background="{DynamicResource FirstColor}">
+        Background="{DynamicResource SecondColor}">
 
         <Label
             Margin="0 50"

@@ -3,20 +3,39 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:fa="http://schemas.fontawesome.io/icons/"
       xmlns:local="clr-namespace:LearningManagementSystem.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      Loaded="Page_Loaded"
       Title="CoursePage">
 
     <Grid
-        Margin="20"
-        Background="{DynamicResource FirstColor}"
+        Margin="10"
+        Background="{DynamicResource SecondColor}"
         >
-        <Label Content="Courses"
-               FontSize="40"
-               HorizontalAlignment="Center"
-               Margin="0 50">
-            
+
+        <fa:ImageAwesome 
+            x:Name="loader" 
+            Grid.Row="1" 
+            Visibility="Visible" 
+            Icon="Spinner" 
+            Spin="True" 
+            Height="50" 
+            Width="50" />
+
+        <ScrollViewer
+            x:Name="scrolViver"
+            Visibility="Collapsed">
+            <WrapPanel 
+                x:Name="wrp_Course">
+            </WrapPanel>
+        </ScrollViewer>
+        <Label x:Name="emptyData"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Visibility="Collapsed"
+            Content="Xozircha malumotlar yo'q"
+            FontSize="18">
         </Label>
         
     </Grid>

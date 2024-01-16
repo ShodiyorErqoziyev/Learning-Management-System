@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace LearningManagementSystem.Components
 {
     /// <summary>
-    /// Interaction logic for GroupComponent.xaml
+    /// Interaction logic for CourseComponent.xaml
     /// </summary>
-    public partial class GroupComponent : UserControl
+    public partial class CourseComponent : UserControl
     {
-        public GroupComponent()
+        public CourseComponent()
         {
             InitializeComponent();
         }

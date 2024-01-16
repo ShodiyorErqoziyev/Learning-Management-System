@@ -1,28 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LearningManagementSystem.Components;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace LearningManagementSystem.Pages
+namespace LearningManagementSystem.Pages;
+
+/// <summary>
+/// Interaction logic for CoursePage.xaml
+/// </summary>
+public partial class CoursePage : Page
 {
-    /// <summary>
-    /// Interaction logic for CoursePage.xaml
-    /// </summary>
-    public partial class CoursePage : Page
+    public CoursePage()
     {
-        public CoursePage()
+        InitializeComponent();
+    }
+
+    private void Page_Loaded(object sender, RoutedEventArgs e)
+    {
+        loader.Visibility = Visibility.Collapsed;
+        scrolViver.Visibility = Visibility.Visible;
+        for (int i = 0; i < 15; i++)
         {
-            InitializeComponent();
+            CourseComponent courseComponent = new CourseComponent();
+            wrp_Course.Children.Add(courseComponent);
         }
     }
 }
