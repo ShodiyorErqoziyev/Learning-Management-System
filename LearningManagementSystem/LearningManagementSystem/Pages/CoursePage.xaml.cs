@@ -24,4 +24,19 @@ public partial class CoursePage : Page
             wrp_Course.Children.Add(courseComponent);
         }
     }
+
+    private void btnCreateCourse_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+    {
+
+    }
+
+    private void TextBox_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+    {
+
+    }
 }

@@ -9,7 +9,7 @@
         AllowsTransparency="True"
         Background="Transparent"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="700" Width="1100">
+        Title="MainWindow" Height="750" Width="1250">
     <Border
         Background="{DynamicResource FirstColor}"
         CornerRadius="10">
