@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearningManagementSystem.Windows.Course;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,32 @@ namespace LearningManagementSystem.Components
         public CourseComponent()
         {
             InitializeComponent();
+        }
+
+        private void Course_Component_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Course_Component.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#329DFF"));
+        }
+
+        private void Course_Component_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Course_Component.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Transparent"));
+        }
+
+        private void Course_Component_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            CourseViewWindow courseViewWindow = new CourseViewWindow();
+            courseViewWindow.ShowDialog();
+        }
+
+        private void btnManege_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void deletebtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

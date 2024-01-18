@@ -9,6 +9,8 @@ namespace LearningManagementSystem.Pages;
 /// </summary>
 public partial class CoursePage : Page
 {
+
+
     public CoursePage()
     {
         InitializeComponent();
@@ -27,7 +29,7 @@ public partial class CoursePage : Page
 
     private void btnCreateCourse_Click(object sender, RoutedEventArgs e)
     {
-
+        
     }
 
     private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

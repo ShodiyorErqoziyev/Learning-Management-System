@@ -1,31 +1,67 @@
 ﻿<UserControl x:Class="LearningManagementSystem.Components.CourseComponent"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:LearningManagementSystem.Components"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" 
              >
     <Border
+        x:Name="Course_Component"
+        MouseEnter="Course_Component_MouseEnter"
+        MouseLeave="Course_Component_MouseLeave"
+        MouseDown="Course_Component_MouseDown"  
         Height="350"
         Width="450"
         Margin="10"
+        BorderThickness="0.7"
+        BorderBrush="Transparent"
         Background="{DynamicResource FirstColor}"
         CornerRadius="10"
         >
         <StackPanel>
+
+            <Grid>
+                <Border
+                    CornerRadius="10"
+                    Margin="10 10 10 0"
+                    Height="200"
+                    VerticalAlignment="Top">
+
+                    <Border.Background>
+                        <ImageBrush x:Name="CourseName"/>
+                    </Border.Background>
+
+                </Border>
+
+                <Button
+                    x:Name="deletebtn"
+                    Background="White"
+                    Height="30"
+                    Width="30"
+                    Margin="0 15 15 0"
+                    Click="deletebtn_Click"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Style="{DynamicResource DeleteButton}">
+
+                </Button>
+
+                <Button
+                    x:Name="btnManege"
+                    Click="btnManege_Click"
+                    Background="White"
+                    Height="30"
+                    Width="30"
+                    Margin="15 15 0 0"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Style="{DynamicResource EditeButton}">
+
+                </Button>
+
+            </Grid>
             
-            <Border
-                CornerRadius="10"
-                Margin="10"
-                Height="200"
-                VerticalAlignment="Top">
-
-                <Border.Background>
-                    <ImageBrush x:Name="CourseName"/>
-                </Border.Background>
-
-            </Border>
+            
 
             <Label
                 HorizontalAlignment="Center"
@@ -33,7 +69,16 @@
                 Style="{DynamicResource MainLabel}">
                 
             </Label>
-            
+
+            <TextBlock
+                Height="75"
+                FontSize="14"
+                Foreground="{DynamicResource BorderColor}"
+                TextWrapping="Wrap"
+                Margin="10"
+                TextAlignment="Center"
+                Text="khhkjh hhh shdb xczxzxc dfsfsdfew rw erwerwr werwerwe erwewrw werwrewerw werwreweewr ryrtutyi tyrtgtrg vffjaj dfhb sfja vsdf asdbfj asdas asdasd asdasda asdasdas  asdasdas asda sd asas da sd asdas d asd asd asd asasdas as da sdasdas a sdasdasd asdasfdas  asdas d ass dasdas  fas fasd as da sd as da sd as  asdasdasd  sdfsdfsdfsd xcvxc "/>
+
         </StackPanel>
         
 
