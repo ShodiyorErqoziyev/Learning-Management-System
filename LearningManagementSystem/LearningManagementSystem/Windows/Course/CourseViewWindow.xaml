@@ -30,8 +30,13 @@
                 Click="btnClose_Click" 
                 HorizontalAlignment="Right"
                 Style="{DynamicResource ClosedButton}"/>
-            
-            
+
+            <Grid
+                Grid.Row="1">
+                
+                
+                
+            </Grid>
 
         </Grid>
         

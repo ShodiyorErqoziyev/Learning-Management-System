@@ -27,7 +27,7 @@
                 Content="Qidirish"
                 VerticalAlignment="Center"
                 Margin="10"
-                FontSize="14"
+                FontSize="18"
                 Style="{DynamicResource TitleLabel}"/>
 
             <Border
