@@ -11,7 +11,7 @@
         MouseLeave="Course_Component_MouseLeave"
         MouseDown="Course_Component_MouseDown"  
         Height="350"
-        Width="450"
+        Width="360"
         Margin="10"
         BorderThickness="0.7"
         BorderBrush="Transparent"
@@ -28,7 +28,8 @@
                     VerticalAlignment="Top">
 
                     <Border.Background>
-                        <ImageBrush x:Name="CourseName"/>
+                        <ImageBrush x:Name="CourseName"
+                                    ImageSource="/Assets/Images/download.png"/>
                     </Border.Background>
 
                 </Border>
@@ -36,9 +37,9 @@
                 <Button
                     x:Name="deletebtn"
                     Background="White"
-                    Height="30"
-                    Width="30"
-                    Margin="0 15 15 0"
+                    Height="28"
+                    Width="28"
+                    Margin="0 20 20 0"
                     Click="deletebtn_Click"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
@@ -50,9 +51,9 @@
                     x:Name="btnManege"
                     Click="btnManege_Click"
                     Background="White"
-                    Height="30"
-                    Width="30"
-                    Margin="15 15 0 0"
+                    Height="28"
+                    Width="28"
+                    Margin="20 20 0 0"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"
                     Style="{DynamicResource EditeButton}">
@@ -66,6 +67,7 @@
             <Label
                 HorizontalAlignment="Center"
                 Content="Dot Net"
+                FontSize="20"
                 Style="{DynamicResource MainLabel}">
                 
             </Label>

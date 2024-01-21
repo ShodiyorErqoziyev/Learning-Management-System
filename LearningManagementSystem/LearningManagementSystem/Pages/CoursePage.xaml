@@ -8,7 +8,7 @@
       Loaded="Page_Loaded"
       Title="CoursePage">
     <Grid
-        Margin="10 10 5 10">
+        Margin="10 10 5 20">
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
