@@ -1,9 +1,10 @@
-﻿using System.Runtime.InteropServices;
+﻿using LearningManagementSystem.Pages.Courses;
 using System;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
-using static LearningManagementSystem.Windows.BlurWindow.BlurEffect;
 using System.Windows.Media;
+using static LearningManagementSystem.Windows.BlurWindow.BlurEffect;
 
 namespace LearningManagementSystem.Windows.Course;
 
@@ -16,8 +17,6 @@ public partial class CourseViewWindow : Window
     {
         InitializeComponent();
     }
-
-
 
     [DllImport("user32.dll")]
     internal static extern int SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttributeData data);
@@ -46,6 +45,8 @@ public partial class CourseViewWindow : Window
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
         EnableBlur();
+        CourseViewPage courseViewPage = new CourseViewPage();
+        PageNavigator.Content = courseViewPage;
     }
 
     private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -53,38 +54,4 @@ public partial class CourseViewWindow : Window
         this.Close();
     }
 
-    private void Lesson_Count_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
-    {
-        Lesson_Count.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#329DFF"));
-    }
-
-    private void Lesson_Count_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
-    {
-        Lesson_Count.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Black"));
-    }
-
-    private void Student_Count_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
-    {
-        Student_Count.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#329DFF"));
-    }
-
-    private void Student_Count_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
-    {
-        Student_Count.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Black"));
-    }
-
-    private void Lesson_Count_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-    {
-
-    }
-
-    private void Student_Count_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-    {
-
-    }
-    
-    private void Description_Button_Click(object sender, RoutedEventArgs e)
-    {
-
-    }
 }

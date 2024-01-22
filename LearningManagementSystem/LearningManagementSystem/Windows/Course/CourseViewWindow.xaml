@@ -18,6 +18,30 @@
         CornerRadius="10"
         Background="{DynamicResource FirstColor}">
 
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button
+                Grid.Row="0"
+                x:Name="Close"     
+                Click="btnClose_Click" 
+                HorizontalAlignment="Right"
+                Style="{DynamicResource ClosedButton}"/>
+
+            <Border
+                Grid.Row="1">
+                
+                <Frame
+                    Name="PageNavigator"
+                    NavigationUIVisibility="Hidden"/>
+                
+            </Border>
+
+        </Grid>
+        
         <Border.Effect>
             <DropShadowEffect
                 BlurRadius="5"
@@ -27,129 +51,7 @@
 
             </DropShadowEffect>
         </Border.Effect>
-        
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="240"/>
-                <RowDefinition Height="100"/>
-            </Grid.RowDefinitions>
 
-            <Button 
-                Grid.Row="0"
-                x:Name="Close"     
-                Click="btnClose_Click" 
-                HorizontalAlignment="Right"
-                Style="{DynamicResource ClosedButton}"/>
-
-            <Label
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                FontSize="24"
-                Style="{DynamicResource MainLabel}"
-                Content="Dot Net"/>
-
-            <Border
-                CornerRadius="10"
-                Margin="30 20"
-                Grid.Row="1">
-
-                <Border.Background>
-                    <ImageBrush
-                        ImageSource="/Assets/Images/download.png" >
-                    </ImageBrush> 
-                </Border.Background>
-                
-            </Border>
-
-            <Grid
-                Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <StackPanel
-                    Margin="30 0 0 0"
-                    Orientation="Vertical"
-                    Grid.Column="0">
-
-                    <Label
-                        Style="{DynamicResource MainLabel}"
-                        Content="Kurs nomi :"/>
-                    <Label
-                        Style="{DynamicResource MainLabel}"
-                        Content="O'qituvchisi :"/>
-                    <Label
-                        Style="{DynamicResource MainLabel}"
-                        Content="Yo'nalishi :"/>
-                    <Label
-                        Style="{DynamicResource MainLabel}"
-                        Content="Darslar soni :"/>
-                    <Label
-                        Style="{DynamicResource MainLabel}"
-                        Content="O'quvchilar soni :"/>
-                    
-                    <Label
-                        x:Name="Student_Count"
-                        MouseEnter="Student_Count_MouseEnter"
-                        MouseLeave="Student_Count_MouseLeave"
-                        MouseDown="Student_Count_MouseDown"
-                        Margin="0 15 0 0"
-                        Style="{DynamicResource MainLabel}"
-                        Content="O'quvchilar ro'yxati..."/>
-
-
-                </StackPanel>
-
-                <StackPanel
-                    Orientation="Vertical"
-                    Grid.Column="1">
-
-                    <Label
-                        Style="{DynamicResource MainLabel}"
-                        Content="Dot Net"/>
-                    <Label
-                        Style="{DynamicResource MainLabel}"
-                        Content="Erqo'ziyev Shodiyor"/>
-                    <Label
-                        Style="{DynamicResource MainLabel}"
-                        Content="Dasturlash"/>
-                    <Label
-                        Style="{DynamicResource MainLabel}"
-                        Content="60"/>
-                    <Label
-                        Style="{DynamicResource MainLabel}"
-                        Content="25"/>
-
-                    <Label
-                        x:Name="Lesson_Count"
-                        MouseEnter="Lesson_Count_MouseEnter"
-                        MouseLeave="Lesson_Count_MouseLeave"
-                        MouseDown="Lesson_Count_MouseDown"
-                        Margin="0 15 0 0"
-                        Style="{DynamicResource MainLabel}"
-                        Content="Darslar ro'yxati..."/>
-
-
-                </StackPanel>
-
-            </Grid>
-
-            <Button
-                x:Name="Description_Button"
-                Grid.Row="3"
-                Content="Ma'lumot"
-                FontSize="20"
-                Width="250"
-                Click="Description_Button_Click"
-                Style="{DynamicResource LoginButton}">
-                
-            </Button>
-
-        </Grid>
-        
     </Border>
     
 </Window>

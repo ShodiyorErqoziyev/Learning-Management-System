@@ -8,6 +8,7 @@
 
     <SolidColorBrush x:Key="BorderColor" Color="White"/>
     <SolidColorBrush x:Key="LabelColor" Color="#0D0D0D"/>
+    <SolidColorBrush x:Key="labelColor" Color="White"/>
 
     <SolidColorBrush x:Key="btncolor" Color="#DEDEDE"/>
     <SolidColorBrush x:Key="btnMouseEnter" Color="#FFFFFF"/>
