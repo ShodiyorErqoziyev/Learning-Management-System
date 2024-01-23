@@ -14,7 +14,7 @@
 
     <Border
         Height="700"
-        Width="500"
+        Width="600"
         CornerRadius="10"
         Background="{DynamicResource FirstColor}">
 

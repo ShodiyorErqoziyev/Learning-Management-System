@@ -17,7 +17,7 @@
 
         <Border
                 CornerRadius="10"
-                Margin="30 20"
+                Margin="50 0 50 10"
                 Grid.Row="0">
 
             <Border.Background>
@@ -36,7 +36,7 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel
-                    Margin="30 0 0 0"
+                    Margin="50 0 0 0"
                     Orientation="Vertical"
                     Grid.Column="0">
 
@@ -69,6 +69,7 @@
             </StackPanel>
 
             <StackPanel
+                Margin="20 0 0 0"
                     Orientation="Vertical"
                     Grid.Column="1">
 

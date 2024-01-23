@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using LearningManagementSystem.Windows.Course;
+using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -38,16 +40,41 @@ public partial class CourseViewPage : Page
 
     private void Lesson_Count_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
+        CourseAllLessonsPage courseAllLessonsPage = new CourseAllLessonsPage();
 
+        CourseViewWindow courseViewWindow = GetCourseViewWindow();
+        courseViewWindow.PageNavigator.Content = courseAllLessonsPage;
     }
 
     private void Student_Count_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
+        CourseAllStudentsPage courseAllStudentsPage = new CourseAllStudentsPage();
 
+        CourseViewWindow courseViewWindow = GetCourseViewWindow();
+        courseViewWindow.PageNavigator.Content = courseAllStudentsPage;
     }
 
     private void Description_Button_Click(object sender, RoutedEventArgs e)
     {
 
+    }
+
+    public static CourseViewWindow GetCourseViewWindow()
+    {
+        CourseViewWindow courseViewWindow = null!;
+
+        foreach (Window window in Application.Current.Windows)
+        {
+            Type type = typeof(CourseViewWindow);
+            if (window != null && window.DependencyObjectType.Name == type.Name)
+            {
+                courseViewWindow = (CourseViewWindow)window;
+                if (courseViewWindow != null)
+                {
+                    break;
+                }
+            }
+        }
+        return courseViewWindow!;
     }
 }
