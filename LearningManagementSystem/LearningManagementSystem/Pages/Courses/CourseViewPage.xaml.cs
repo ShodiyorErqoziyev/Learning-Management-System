@@ -56,7 +56,10 @@ public partial class CourseViewPage : Page
 
     private void Description_Button_Click(object sender, RoutedEventArgs e)
     {
+        CourseDescriptionPage courseDescriptionPage = new CourseDescriptionPage();
 
+        CourseViewWindow courseViewWindow = GetCourseViewWindow();
+        courseViewWindow.PageNavigator.Content = courseDescriptionPage;
     }
 
     public static CourseViewWindow GetCourseViewWindow()

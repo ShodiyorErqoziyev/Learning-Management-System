@@ -1,0 +1,43 @@
+﻿<Page x:Class="LearningManagementSystem.Pages.Courses.CourseDescriptionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LearningManagementSystem.Pages.Courses"
+      mc:Ignorable="d" 
+      Title="CourseDescriptionPage">
+
+    <Grid>
+
+        <Border
+                x:Name="Back_Border_Button"
+                Grid.Column="0"
+                Width="40"
+                Height="25"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                MouseDown="Back_Border_Button_MouseDown">
+
+            <Path
+                    Height="20"
+                    Width="20"
+                    VerticalAlignment="Center"
+                    Data="{DynamicResource back}"
+                    Fill="{DynamicResource BorderColor}"/>
+
+        </Border>
+
+        <TextBlock
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            FontWeight="SemiBold"
+            FontSize="16"
+            Margin="30 50"
+            Foreground="{DynamicResource labelColor}"
+            Text="zdbvabkdsafjabf adfgadadf adsfa sasdf SDFSF SDF SDFs fggf sfgdfg dfgsdfg sdfg sdfg sdfg sdfg sd fgsd fg sdfg sd gf sdfg sdf g gsh yrty j yuik ytu et hw ert wer y gfh dgj dghj sgfadfg sfdgsdf ghsf hs fgh srt hs rt srt g">
+            
+        </TextBlock>
+        
+    </Grid>
+</Page>
