@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LearningManagementSystem.Entities;
+﻿namespace LearningManagementSystem.Entities;
 
 public class Teacher : Human
 {
