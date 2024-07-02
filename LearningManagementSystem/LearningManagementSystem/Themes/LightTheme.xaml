@@ -13,7 +13,7 @@
     <SolidColorBrush x:Key="btncolor" Color="#329DFF"/>
     <SolidColorBrush x:Key="btnMouseEnter" Color="#57AEFF"/>
     <SolidColorBrush x:Key="btnMouseClick" Color="#2696FF"/>
-    
-    
+    <SolidColorBrush x:Key="borderMouseEnter" Color="#57AEFF"/>
+
 
 </ResourceDictionary>

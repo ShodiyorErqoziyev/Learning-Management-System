@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace LearningManagementSystem.Components
 {
@@ -23,6 +13,21 @@ namespace LearningManagementSystem.Components
         public TeacherComponent()
         {
             InitializeComponent();
+        }
+
+        private void Teacher_Component_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Teacher_Component.BorderBrush = (SolidColorBrush)Application.Current.Resources["borderMouseEnter"];
+        }
+
+        private void Teacher_Component_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Teacher_Component.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Transparent"));
+        }
+
+        private void Teacher_Component_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

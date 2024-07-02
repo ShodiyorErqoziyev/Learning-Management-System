@@ -1,6 +1,7 @@
 ﻿using LearningManagementSystem.Windows.Course;
 using System;
 using System.Collections.Generic;
+using System.DirectoryServices.ActiveDirectory;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,7 @@ namespace LearningManagementSystem.Components
 
         private void Course_Component_MouseEnter(object sender, MouseEventArgs e)
         {
-            Course_Component.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#329DFF"));
+            Course_Component.BorderBrush = (SolidColorBrush)Application.Current.Resources["borderMouseEnter"]; 
         }
 
         private void Course_Component_MouseLeave(object sender, MouseEventArgs e)
