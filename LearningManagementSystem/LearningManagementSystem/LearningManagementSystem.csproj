@@ -9,6 +9,12 @@
 
   <ItemGroup>
     <None Remove="Assets\Images\download.png" />
+    <None Remove="Assets\Images\polat_alemdar.jfif" />
+    <None Remove="Assets\Images\teacher.jfif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\polat_alemdar.jfif" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +28,7 @@
 
   <ItemGroup>
     <Resource Include="Assets\Images\download.png" />
+    <Resource Include="Assets\Images\teacher.jfif" />
   </ItemGroup>
 
 </Project>

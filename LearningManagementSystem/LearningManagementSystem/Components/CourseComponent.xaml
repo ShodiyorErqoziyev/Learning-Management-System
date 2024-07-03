@@ -74,11 +74,9 @@
 
             <TextBlock
                 Height="75"
-                FontSize="14"
-                Foreground="{DynamicResource BorderColor}"
-                TextWrapping="Wrap"
                 Margin="10"
-                Text="khhkjh hhh shdb xczxzxc dfsfsdfew rw erwerwr werwerwe erwewrw werwrewerw werwreweewr ryrtutyi tyrtgtrg vffjaj dfhb sfja vsdf asdbfj asdas asdasd asdasda asdasdas  asdasdas asda sd asas da sd asdas d asd asd asd asasdas as da sdasdas a sdasdasd asdasfdas  asdas d ass dasdas  fas fasd as da sd as da sd as  asdasdasd  sdfsdfsdfsd xcvxc "/>
+                Style="{DynamicResource Description_Style}"
+                Text="Bu kursimizda .NET bo'yicha darslar o'tiladi. Kursning davomiyligi olti oy. 12 ta dan 30 ta gacha o'quvchi qabul qiladi."/>
 
         </StackPanel>
         

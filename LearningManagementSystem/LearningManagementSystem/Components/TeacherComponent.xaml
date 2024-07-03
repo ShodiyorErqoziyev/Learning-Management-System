@@ -7,14 +7,85 @@
     <Border
         x:Name="Teacher_Component"
         CornerRadius="10"
-        Width="400"
-        Height="450"
+        Width="450"
+        Height="270"
+        Margin="10"
         BorderThickness="0.7"
         BorderBrush="Transparent"
         MouseEnter="Teacher_Component_MouseEnter"
         MouseLeave="Teacher_Component_MouseLeave"
         MouseDown="Teacher_Component_MouseDown"
         Background="{DynamicResource FirstColor}">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid
+                Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+
+                <Border
+                    Grid.Column="0"
+                    x:Name="Teacher"
+                    CornerRadius="60"
+                    Margin="20 20 0 0">
+
+                    <Border.Background>
+                        <ImageBrush
+                            x:Name="Teacher_Picture"
+                            ImageSource="/Assets/Images/teacher.jfif"/>
+                    </Border.Background>
+                    
+                </Border>
+
+                <StackPanel
+                    Orientation="Horizontal"
+                    Margin="20 10 0 0"
+                    VerticalAlignment="Center"
+                    Grid.Column="1">
+
+                    <Label
+                        Name="Teacher_Firstname"
+                        Content="Michael"
+                        Style="{DynamicResource MainLabel}"/>
+
+                    <Label
+                        Name="Teacher_Lastname"
+                        Content="Olamide"
+                        Margin="5 0 0 0"
+                        Style="{DynamicResource MainLabel}"/>
+
+                </StackPanel>
+                
+            </Grid>
+
+            <StackPanel
+                Grid.Row="1"
+                Margin="10">
+
+                <Label
+                    Style="{DynamicResource MainLabel}"
+                    Content="Dasturlash"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Margin="10 20 0 0"/>
+
+                <TextBlock
+                    Margin="10"
+                    Height="40"
+                    Style="{DynamicResource Description_Style}"
+                    Text="Bu o'qituchi dasturlash bo'yicha ikki yillik tajribaga ega."/>
+
+            </StackPanel>
+            
+        </Grid>
         
     </Border>
 </UserControl>
