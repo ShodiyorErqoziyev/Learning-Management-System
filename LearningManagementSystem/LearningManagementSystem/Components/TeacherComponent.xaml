@@ -63,6 +63,47 @@
                         Style="{DynamicResource MainLabel}"/>
 
                 </StackPanel>
+
+                <Border
+                    x:Name="Action_Border_Bakcground"
+                    Background="Transparent"
+                    CornerRadius="10"
+                    LostFocus="Action_Button_LostFocus"
+                    Margin="10 25 10 5"
+                    Grid.Column="2">
+                    
+                    <StackPanel>
+                        <Button
+                            Name="Action_Button"
+                            Click="Action_Button_Click"
+                            Background="{DynamicResource BorderColor}"
+                            VerticalAlignment="Top"
+                            Margin="0 7 0 0"
+                            HorizontalAlignment="Center"
+                            Tag="{DynamicResource action}"
+                            Style="{DynamicResource ActionButton}"/>
+
+                        <StackPanel
+                            x:Name="Delete_Update_Buttons"
+                            Visibility="Collapsed"
+                            HorizontalAlignment="Center"
+                            Margin="0 15">
+
+                            <Button
+                                Background="#CE0000"
+                                Tag="{DynamicResource delete}"
+                                Style="{DynamicResource ActionButton}"/>
+                            <Button
+                                Background="#329DFF"
+                                Tag="{DynamicResource edit}"
+                                Style="{DynamicResource ActionButton}"/>
+
+                    </StackPanel>
+
+                </StackPanel>
+                </Border>
+
+                
                 
             </Grid>
 

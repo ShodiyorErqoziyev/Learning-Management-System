@@ -15,5 +15,9 @@
     <SolidColorBrush x:Key="btnMouseClick" Color="#2696FF"/>
     <SolidColorBrush x:Key="borderMouseEnter" Color="#57AEFF"/>
 
+    <SolidColorBrush x:Key="ActionMouseEnter" Color="#CFCFCF"/>
+    <SolidColorBrush x:Key="ActionMouseClick" Color="#B6B6B6"/>
+    <SolidColorBrush x:Key="ActionBorderBackground" Color="#E2E2E2"/>
+
 
 </ResourceDictionary>

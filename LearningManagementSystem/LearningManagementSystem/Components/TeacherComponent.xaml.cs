@@ -10,6 +10,9 @@ namespace LearningManagementSystem.Components
     /// </summary>
     public partial class TeacherComponent : UserControl
     {
+
+        private bool action_button = false;
+
         public TeacherComponent()
         {
             InitializeComponent();
@@ -28,6 +31,29 @@ namespace LearningManagementSystem.Components
         private void Teacher_Component_MouseDown(object sender, MouseButtonEventArgs e)
         {
 
+        }
+
+        private void Action_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (!action_button)
+            {
+                Delete_Update_Buttons.Visibility = Visibility.Visible;
+                Action_Border_Bakcground.Background = (SolidColorBrush)Application.Current.Resources["ActionBorderBackground"];
+                action_button = true;
+            }
+            else
+            {
+                Delete_Update_Buttons.Visibility = Visibility.Collapsed;
+                Action_Border_Bakcground.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Transparent"));
+                action_button = false;
+            }
+        }
+
+        private void Action_Button_LostFocus(object sender, RoutedEventArgs e)
+        {
+            Delete_Update_Buttons.Visibility = Visibility.Collapsed;
+            Action_Border_Bakcground.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Transparent"));
+            action_button = false;
         }
     }
 }
