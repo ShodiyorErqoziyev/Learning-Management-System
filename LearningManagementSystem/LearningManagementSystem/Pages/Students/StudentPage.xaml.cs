@@ -1,28 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LearningManagementSystem.Components;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace LearningManagementSystem.Pages
+namespace LearningManagementSystem.Pages;
+
+/// <summary>
+/// Interaction logic for StudentPage.xaml
+/// </summary>
+public partial class StudentPage : Page
 {
-    /// <summary>
-    /// Interaction logic for StudentPage.xaml
-    /// </summary>
-    public partial class StudentPage : Page
+    public StudentPage()
     {
-        public StudentPage()
+        InitializeComponent();
+    }
+    private void Page_Loaded(object sender, System.Windows.RoutedEventArgs e)
+    {
+        loader.Visibility = Visibility.Collapsed;
+        scrolViver.Visibility = Visibility.Visible;
+
+        for (int i = 1; i <= 30; i++)
         {
-            InitializeComponent();
+            StudentComponent student = new StudentComponent();
+            student.Student_Number.Content = i.ToString();
+            wrp_Students.Children.Add(student);
         }
     }
+
+    private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+    {
+
+    }
+
+    private void TextBox_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+    {
+
+    }
+
+    private void btnCreateStudent_Click(object sender, System.Windows.RoutedEventArgs e)
+    {
+
+    }
+
 }

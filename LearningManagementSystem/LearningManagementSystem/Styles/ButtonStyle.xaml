@@ -565,5 +565,43 @@
         </Setter>
     </Style>
 
+    <Style x:Key="MoreButton" TargetType="{x:Type Button}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border 
+                        Background="{DynamicResource FirstColor}"
+                        x:Name="B" 
+                        Height="25"
+                        Width="30"
+                        CornerRadius="10">
+
+                        <Path 
+                            Grid.Column="0"
+                            x:Name="Icon" 
+                            Data="{DynamicResource more}"
+                            Fill="{DynamicResource BorderColor}"
+                            Height="20"
+                            Width="20"
+                            Stretch="Uniform"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="{DynamicResource ActionMouseEnter}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="B" Property="Background" Value="Transparent"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="{DynamicResource ActionMouseClick}"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
 </ResourceDictionary>

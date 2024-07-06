@@ -3,10 +3,62 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid
-        Background="White">
+             mc:Ignorable="d">
+    <Border
+        x:Name="Student_Border"
+        MouseEnter="Student_Border_MouseEnter"
+        MouseLeave="Student_Border_MouseLeave"
+        BorderThickness="1"
+        BorderBrush="Transparent"
+        CornerRadius="7"
+        Height="40"
+        Margin="5 5 20 5"
+        Background="{DynamicResource FirstColor}">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Name="Student_Number"
+                Grid.Column="0"
+                Style="{DynamicResource InfoLabel}"
+                Margin="5 0 0 0"/>
             
-    </Grid>
+            <Label
+                Name="Student_FirstName"
+                Grid.Column="1"
+                Style="{DynamicResource InfoLabel}"
+                Content="Shodiyor"
+                Margin="10 0 0 0"/>
+
+            <Label
+                Name="Student_LastName"
+                Grid.Column="2"
+                Style="{DynamicResource InfoLabel}"
+                Content="Erqo'ziyev"/>
+            <Label
+                Name="Student_Group"
+                Grid.Column="3"
+                Style="{DynamicResource InfoLabel}"
+                Content=".NET"/>
+            <Label
+                Name="Student_"
+                Grid.Column="4"
+                Style="{DynamicResource InfoLabel}"
+                Content=""/>
+            <Button
+                Grid.Column="5"
+                Style="{DynamicResource MoreButton}"/>
+
+
+        </Grid>
+        
+    </Border>
 </UserControl>

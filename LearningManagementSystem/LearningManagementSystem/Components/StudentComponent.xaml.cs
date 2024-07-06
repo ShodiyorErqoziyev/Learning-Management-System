@@ -1,28 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace LearningManagementSystem.Components
+namespace LearningManagementSystem.Components;
+
+/// <summary>
+/// Interaction logic for StudentComponent.xaml
+/// </summary>
+public partial class StudentComponent : UserControl
 {
-    /// <summary>
-    /// Interaction logic for StudentComponent.xaml
-    /// </summary>
-    public partial class StudentComponent : UserControl
+    public StudentComponent()
     {
-        public StudentComponent()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+    }
+
+    private void Student_Border_MouseEnter(object sender, MouseEventArgs e)
+    {
+        Student_Border.BorderBrush = (SolidColorBrush)Application.Current.Resources["borderMouseEnter"];
+    }
+
+    private void Student_Border_MouseLeave(object sender, MouseEventArgs e)
+    {
+        Student_Border.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Transparent"));
     }
 }
