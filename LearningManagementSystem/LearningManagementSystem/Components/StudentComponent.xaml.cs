@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using LearningManagementSystem.Windows.Students;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -23,5 +24,11 @@ public partial class StudentComponent : UserControl
     private void Student_Border_MouseLeave(object sender, MouseEventArgs e)
     {
         Student_Border.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Transparent"));
+    }
+
+    private void Other_Button_Click(object sender, RoutedEventArgs e)
+    {
+        StudentViewWindow studentViewWindow = new StudentViewWindow();
+        studentViewWindow.ShowDialog();
     }
 }

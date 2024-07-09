@@ -8,12 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Images\default_image.png" />
     <None Remove="Assets\Images\download.png" />
     <None Remove="Assets\Images\polat_alemdar.jfif" />
     <None Remove="Assets\Images\teacher.jfif" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Images\default_image.png" />
     <Resource Include="Assets\Images\polat_alemdar.jfif" />
   </ItemGroup>
 
@@ -23,7 +25,7 @@
 
   <ItemGroup>
     <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
-    <PackageReference Include="Npgsql" Version="8.0.1" />
+    <PackageReference Include="Npgsql" Version="8.0.3" />
   </ItemGroup>
 
   <ItemGroup>

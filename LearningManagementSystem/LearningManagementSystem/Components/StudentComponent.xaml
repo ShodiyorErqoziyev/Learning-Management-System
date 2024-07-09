@@ -38,7 +38,8 @@
                 CornerRadius="20">
                 <Border.Background>
                     <ImageBrush
-                        ImageSource="\assets\images\polat_alemdar.jfif"/>
+                        Stretch="UniformToFill"
+                        ImageSource="\assets\images\default_image.png"/>
                 </Border.Background>
 
             </Border>
@@ -63,7 +64,9 @@
                 Style="{DynamicResource InfoLabel}"
                 Content="Kutmoqda"/>
             <Button
+                Name="Other_Button"
                 Grid.Column="6"
+                Click="Other_Button_Click"
                 Style="{DynamicResource MoreButton}">
 
                 <Button.ToolTip>
