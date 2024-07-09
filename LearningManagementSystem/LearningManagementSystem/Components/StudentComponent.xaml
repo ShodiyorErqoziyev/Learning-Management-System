@@ -11,51 +11,69 @@
         BorderThickness="1"
         BorderBrush="Transparent"
         CornerRadius="7"
-        Height="40"
+        Height="50"
         Margin="5 5 20 5"
         Background="{DynamicResource FirstColor}">
 
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="1.6*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="60"/>
             </Grid.ColumnDefinitions>
-
+            
             <Label
                 Name="Student_Number"
                 Grid.Column="0"
                 Style="{DynamicResource InfoLabel}"
                 Margin="5 0 0 0"/>
-            
-            <Label
-                Name="Student_FirstName"
+
+            <Border
                 Grid.Column="1"
-                Style="{DynamicResource InfoLabel}"
-                Content="Shodiyor"
-                Margin="10 0 0 0"/>
+                Margin="5 3"
+                Width="45"
+                CornerRadius="20">
+                <Border.Background>
+                    <ImageBrush
+                        ImageSource="\assets\images\polat_alemdar.jfif"/>
+                </Border.Background>
+
+            </Border>
 
             <Label
-                Name="Student_LastName"
+                Name="Student_FullName"
                 Grid.Column="2"
                 Style="{DynamicResource InfoLabel}"
-                Content="Erqo'ziyev"/>
+                Content="Shodiyor   Erqo'ziyev"
+                Margin="20 0 0 0"/>
+
             <Label
                 Name="Student_Group"
                 Grid.Column="3"
+                Margin="10 0 0 0"
                 Style="{DynamicResource InfoLabel}"
                 Content=".NET"/>
             <Label
-                Name="Student_"
+                Name="Student_Status"
                 Grid.Column="4"
+                Margin="10 0 10 0"
                 Style="{DynamicResource InfoLabel}"
-                Content=""/>
+                Content="Kutmoqda"/>
             <Button
-                Grid.Column="5"
-                Style="{DynamicResource MoreButton}"/>
+                Grid.Column="6"
+                Style="{DynamicResource MoreButton}">
+
+                <Button.ToolTip>
+                    <TextBlock Text="Ko'proq"/>
+                </Button.ToolTip>
+                <ToolTipService.Placement>Bottom</ToolTipService.Placement>
+                <ToolTipService.HorizontalOffset>0</ToolTipService.HorizontalOffset>
+                <ToolTipService.VerticalOffset>10</ToolTipService.VerticalOffset>
+
+            </Button>
 
 
         </Grid>
