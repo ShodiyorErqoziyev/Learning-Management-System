@@ -21,7 +21,6 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="90"/>
             </Grid.RowDefinitions>
 
             <Label
@@ -38,29 +37,16 @@
                 HorizontalAlignment="Right"
                 Style="{DynamicResource ClosedButton}"/>
 
-            <Grid
+            <Border
                 Grid.Row="1">
-                
-            </Grid>
 
-            <Grid
-                Grid.Row="2">
+                <Frame
+                    Name="PageNavigator"
+                    NavigationUIVisibility="Automatic"/>
 
-                <Button
-                    FontSize="19"
-                    Content="O'chirish"
-                    HorizontalAlignment="Left"
-                    Margin="50 0 0 0"
-                    Style="{DynamicResource MainDeleteButton}"/>
+            </Border>
 
-                <Button
-                    FontSize="19"
-                    Content="Yangilash"
-                    HorizontalAlignment="Right"
-                    Margin="0 0 50 0"
-                    Style="{DynamicResource MainEditeButton}"/>
-
-            </Grid>
+            
 
         </Grid>
 

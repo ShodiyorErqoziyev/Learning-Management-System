@@ -1,8 +1,9 @@
-﻿using System.Runtime.InteropServices;
+﻿using LearningManagementSystem.Pages.Students;
 using System;
+using System.Runtime.InteropServices;
 using System.Windows;
-using static LearningManagementSystem.Windows.BlurWindow.BlurEffect;
 using System.Windows.Interop;
+using static LearningManagementSystem.Windows.BlurWindow.BlurEffect;
 
 namespace LearningManagementSystem.Windows.Students;
 
@@ -48,5 +49,8 @@ public partial class StudentViewWindow : Window
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
         EnableBlur();
+
+        StudentViewPage studentViewPage = new StudentViewPage();
+        PageNavigator.Content = studentViewPage;
     }
 }
