@@ -43,10 +43,25 @@
             </Border>
 
             <StackPanel
+                Margin="40 30 0 0"
                 Grid.Column="1">
-                
-                
-                
+
+                <Label
+                    FontSize="16"
+                    Style="{DynamicResource TitleLabel}"
+                    Content="Ismi :"/>
+
+                <Label
+                    FontSize="16"
+                    Style="{DynamicResource TitleLabel}"
+                    Content="Fameliyasi :"/>
+                <Label
+                    FontSize="16"
+                    Style="{DynamicResource TitleLabel}"
+                    Content="Telefon raqami :"/>
+
+
+
             </StackPanel>
             
         </Grid>
