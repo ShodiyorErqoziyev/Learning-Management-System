@@ -20,7 +20,7 @@
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
@@ -43,7 +43,7 @@
             </Border>
 
             <StackPanel
-                Margin="40 30 0 0"
+                Margin="20 30 0 0"
                 Grid.Column="1">
 
                 <Label
@@ -52,15 +52,71 @@
                     Content="Ismi :"/>
 
                 <Label
+                    Margin="0 5 0 0"
                     FontSize="16"
                     Style="{DynamicResource TitleLabel}"
                     Content="Fameliyasi :"/>
                 <Label
-                    FontSize="16"
+                    FontSize="16" 
+                    Margin="0 5 0 0"
                     Style="{DynamicResource TitleLabel}"
                     Content="Telefon raqami :"/>
+                <Label
+                    FontSize="16" 
+                    Margin="0 5 0 0"
+                    Style="{DynamicResource TitleLabel}"
+                    Content="Manzili :"/>
+                <Label
+                    FontSize="16" 
+                    Margin="0 5 0 0"
+                    Style="{DynamicResource TitleLabel}"
+                    Content="Jinsi :"/>
+                <Label
+                    FontSize="16" 
+                    Margin="0 5 0 0"
+                    Style="{DynamicResource TitleLabel}"
+                    Content="Barcha kurslari :"/>
 
+            </StackPanel>
 
+            <StackPanel
+                Margin="0 25 0 0"
+                Grid.Column="2">
+
+                <Label
+                    Name="Student_Firstname"
+                    Content="Shodiyor"
+                    Style="{DynamicResource MainLabel}"/>
+                <Label
+                    Name="Student_Lastname"
+                    Content="Erqo'ziyev"
+                    Style="{DynamicResource MainLabel}"/>
+                <Label
+                    Name="Student_PhoneNumber"
+                    Content="+998917727005"
+                    Style="{DynamicResource MainLabel}"/>
+                <Label
+                    Name="Student_Address"
+                    Content="Sputnik 16A"
+                    Style="{DynamicResource MainLabel}"/>
+                <Label
+                    Name="Student_Gender"
+                    Content="Erkak"
+                    Style="{DynamicResource MainLabel}"/>
+                <ComboBox
+                    Width="180"
+                    Margin=" 5 10 0 0"
+                    Name="All_Courses"
+                    HorizontalAlignment="Left">
+
+                    <ComboBoxItem
+                        Content=".NET-Backand"/>
+                    <ComboBoxItem
+                        Content="Fullstack-Node-JS"/>
+                    <ComboBoxItem
+                        Content="Vue-JS-Frontend"/>
+
+                </ComboBox>
 
             </StackPanel>
             

@@ -23,12 +23,12 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Label
+            <!--<Label
                 Name="Student_Name"
                 Content="Shodiyor  Erqo'ziyev"
                 FontSize="22"
                 HorizontalAlignment="Center"
-                Style="{DynamicResource MainLabel}"/>
+                Style="{DynamicResource MainLabel}"/>-->
 
             <Button
                 Grid.Row="0"
