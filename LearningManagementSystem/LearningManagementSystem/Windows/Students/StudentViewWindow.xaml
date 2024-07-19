@@ -42,7 +42,7 @@
 
                 <Frame
                     Name="PageNavigator"
-                    NavigationUIVisibility="Automatic"/>
+                    NavigationUIVisibility="Hidden"/>
 
             </Border>
 

@@ -137,6 +137,7 @@
                 Content="Yangilash"
                 HorizontalAlignment="Right"
                 Margin="0 0 50 0"
+                Click="Update_Button_Click"
                 Style="{DynamicResource MainEditeButton}"/>
 
         </Grid>

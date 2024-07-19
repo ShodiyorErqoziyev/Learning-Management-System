@@ -79,66 +79,36 @@
             </StackPanel>
 
             <StackPanel
-            Margin="0 25 0 0"
-            Grid.Column="2">
+                Margin="0 25 0 0"
+                Grid.Column="2">
 
-                <Label
-                Name="Student_Firstname"
-                Content="Shodiyor"
-                Style="{DynamicResource MainLabel}"/>
-                <Label
-                Name="Student_Lastname"
-                Content="Erqo'ziyev"
-                Style="{DynamicResource MainLabel}"/>
-                <Label
-                Name="Student_PhoneNumber"
-                Content="+998917727005"
-                Style="{DynamicResource MainLabel}"/>
-                <Label
-                Name="Student_Address"
-                Content="Sputnik 16A"
-                Style="{DynamicResource MainLabel}"/>
-                <Label
-                Name="Student_Gender"
-                Content="Erkak"
-                Style="{DynamicResource MainLabel}"/>
-                <ComboBox
-                Width="180"
-                Margin=" 5 10 0 0"
-                Name="All_Courses"
-                HorizontalAlignment="Left">
+                <TextBox
+                    x:Name="txt_firstname"
+                    Style="{DynamicResource Update_TextBox_Style}"/>
 
-                    <ComboBoxItem
-                    Content=".NET-Backand"/>
-                    <ComboBoxItem
-                    Content="Fullstack-Node-JS"/>
-                    <ComboBoxItem
-                    Content="Vue-JS-Frontend"/>
+                <TextBox
+                    x:Name="txt_lastname"
+                    Style="{DynamicResource Update_TextBox_Style}"/>
 
-                </ComboBox>
+                <TextBox
+                    x:Name="txt_phone_number"
+                    Style="{DynamicResource Update_TextBox_Style}"/>
+
+                <TextBox
+                    x:Name="txt_address"
+                    Style="{DynamicResource Update_TextBox_Style}"/>
 
             </StackPanel>
 
         </Grid>
 
-        <Grid
-        Grid.Row="1">
 
-            <Button
+        <Button
+            Grid.Row="1"
             FontSize="19"
-            Content="O'chirish"
-            HorizontalAlignment="Left"
-            Margin="50 0 0 0"
-            Style="{DynamicResource MainDeleteButton}"/>
-
-            <Button
-            FontSize="19"
-            Content="Yangilash"
-            HorizontalAlignment="Right"
-            Margin="0 0 50 0"
+            Content="Saqlash"
+            HorizontalAlignment="Center"
             Style="{DynamicResource MainEditeButton}"/>
-
-        </Grid>
 
     </Grid>
 </Page>
