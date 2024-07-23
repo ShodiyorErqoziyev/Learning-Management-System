@@ -5,8 +5,6 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LearningManagementSystem.Pages.Students"
       mc:Ignorable="d" 
-      Height="400"
-      Width="700"
       Title="StudentViewPage">
 
     <Grid>
@@ -137,6 +135,7 @@
                 Content="Yangilash"
                 HorizontalAlignment="Right"
                 Margin="0 0 50 0"
+                Tag="{DynamicResource edit}"
                 Click="Update_Button_Click"
                 Style="{DynamicResource MainEditeButton}"/>
 
