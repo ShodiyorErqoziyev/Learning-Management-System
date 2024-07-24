@@ -124,10 +124,12 @@
             Grid.Row="1">
 
             <Button
+                Name="Delete_Student_Button"
                 FontSize="19"
                 Content="O'chirish"
                 HorizontalAlignment="Left"
                 Margin="50 0 0 0"
+                Click="Delete_Student_Button_Click"
                 Style="{DynamicResource MainDeleteButton}"/>
 
             <Button

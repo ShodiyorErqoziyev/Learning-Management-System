@@ -1,13 +1,17 @@
 ﻿using LearningManagementSystem.Pages;
 using LearningManagementSystem.Themes;
+using LearningManagementSystem.Windows;
 using System;
 using System.Windows;
 using System.Windows.Input;
+using static LearningManagementSystem.Windows.MessageBoxWindow;
 
 namespace LearningManagementSystem
 {
     public partial class MainWindow : Window
     {
+
+        string message = string.Empty;
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +31,14 @@ namespace LearningManagementSystem
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            message = "Ilovadan chiqmoqchimisiz?";
+
+            var messageBox = new MessageBoxWindow(message, MessageType.Confirmation, MessageButtons.YesNo);
+            var result = messageBox.ShowDialog();
+            if (result == true)
+            {
+                Application.Current.Shutdown();
+            }
         }
 
         private void MouseDragable_MouseDown(object sender, MouseButtonEventArgs e)
