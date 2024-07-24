@@ -7,6 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="400" d:DesignWidth="700"
       Title="StudentUpdatePage">
+    
+    
 
     <Grid>
         <Grid.RowDefinitions>
@@ -94,22 +96,10 @@
                     x:Name="txt_lastname"
                     Style="{DynamicResource Update_TextBox_Style}"/>
 
-                <StackPanel
-                    Margin="0 10 0 0"
-                    Orientation="Horizontal">
-                    <Label
-                        Margin="0 3 3 0"
-                        Content="+998"
-                        FontSize="16"
-                        Style="{DynamicResource TitleLabel}"/>
-                    <TextBox
-                        MaxLength="9"
-                        TextChanged="txt_phone_number_TextChanged"
-                        Width="155"
-                        x:Name="txt_phone_number"
-                        Style="{DynamicResource Update_TextBox_Style}"/>
-
-                </StackPanel>
+                <TextBox
+                    TextChanged="txt_phone_number_TextChanged"
+                    x:Name="txt_phone_number"
+                    Style="{DynamicResource Phone_Number_TextBox_Style}"/>
 
                 <TextBox
                     x:Name="txt_address"
@@ -171,7 +161,10 @@
             Content="Orqaga"
             HorizontalAlignment="Left"
             Margin="50 0 0 0"
+            Click="Exit_Button_Click"
             Style="{DynamicResource MainButton}"/>
 
     </Grid>
 </Page>
+    
+    
