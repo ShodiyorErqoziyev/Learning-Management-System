@@ -85,16 +85,21 @@
 
                         <StackPanel
                             x:Name="Delete_Update_Buttons"
-                            Visibility="Collapsed"
                             HorizontalAlignment="Center"
                             Margin="0 15">
 
                             <Button
+                                x:Name="Delete_Button"
                                 Background="#CE0000"
+                                Click="Delete_Button_Click"
+                                Visibility="Collapsed"
                                 Tag="{DynamicResource delete}"
                                 Style="{DynamicResource ActionButton}"/>
                             <Button
+                                Visibility="Collapsed"
+                                Name="Update_Button"
                                 Background="#329DFF"
+                                Click="Update_Button_Click"
                                 Tag="{DynamicResource edit}"
                                 Style="{DynamicResource ActionButton}"/>
 

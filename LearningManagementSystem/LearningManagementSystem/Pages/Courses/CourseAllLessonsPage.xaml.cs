@@ -3,6 +3,7 @@ using System.Windows;
 using System;
 using System.Windows.Controls;
 using System.Windows.Input;
+using LearningManagementSystem.Constans;
 
 namespace LearningManagementSystem.Pages.Courses;
 
@@ -30,26 +31,8 @@ public partial class CourseAllLessonsPage : Page
     {
         CourseViewPage page = new CourseViewPage();
 
-        CourseViewWindow window = GetCourseViewWindow();
+        CourseViewWindow window = GetWindow.GetCourseViewWindow();
         window.PageNavigator.Content = page;
     }
 
-    public static CourseViewWindow GetCourseViewWindow()
-    {
-        CourseViewWindow courseViewWindow = null!;
-
-        foreach (Window window in Application.Current.Windows)
-        {
-            Type type = typeof(CourseViewWindow);
-            if (window != null && window.DependencyObjectType.Name == type.Name)
-            {
-                courseViewWindow = (CourseViewWindow)window;
-                if (courseViewWindow != null)
-                {
-                    break;
-                }
-            }
-        }
-        return courseViewWindow!;
-    }
 }

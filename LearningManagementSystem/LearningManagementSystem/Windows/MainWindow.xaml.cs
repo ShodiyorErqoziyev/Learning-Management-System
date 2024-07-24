@@ -33,12 +33,12 @@ namespace LearningManagementSystem
         {
             message = "Ilovadan chiqmoqchimisiz?";
 
-            var messageBox = new MessageBoxWindow(message, MessageType.Confirmation, MessageButtons.YesNo);
-            var result = messageBox.ShowDialog();
-            if (result == true)
-            {
+            //var messageBox = new MessageBoxWindow(message, MessageType.Confirmation, MessageButtons.YesNo);
+            //var result = messageBox.ShowDialog();
+            //if (result == true)
+            //{
                 Application.Current.Shutdown();
-            }
+            //}
         }
 
         private void MouseDragable_MouseDown(object sender, MouseButtonEventArgs e)

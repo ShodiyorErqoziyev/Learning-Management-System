@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using LearningManagementSystem.Constans;
+using LearningManagementSystem.Pages;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -37,13 +39,15 @@ public partial class TeacherComponent : UserControl
     {
         if (!action_button)
         {
-            Delete_Update_Buttons.Visibility = Visibility.Visible;
+            Delete_Button.Visibility = Visibility.Visible;
+            Update_Button.Visibility = Visibility.Visible;
             Action_Border_Bakcground.Background = (SolidColorBrush)Application.Current.Resources["ActionBorderBackground"];
             action_button = true;
         }
         else
         {
-            Delete_Update_Buttons.Visibility = Visibility.Collapsed;
+            Delete_Button.Visibility = Visibility.Collapsed;
+            Update_Button.Visibility = Visibility.Collapsed;
             Action_Border_Bakcground.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Transparent"));
             action_button = false;
         }
@@ -51,8 +55,35 @@ public partial class TeacherComponent : UserControl
 
     private void Action_Button_LostFocus(object sender, RoutedEventArgs e)
     {
-        Delete_Update_Buttons.Visibility = Visibility.Collapsed;
+        var focus = Keyboard.FocusedElement;
+        if(focus == Delete_Button)
+        {
+            Delete_Button.Visibility = Visibility.Visible;
+        }
+        else if(focus == Update_Button)
+        {
+            Update_Button.Visibility = Visibility.Visible;
+        }
+        else
+        {
+            Delete_Button.Visibility = Visibility.Collapsed;
+            Update_Button.Visibility = Visibility.Collapsed;
+        }
+
         Action_Border_Bakcground.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Transparent"));
         action_button = false;
+    }
+
+    private void Delete_Button_Click(object sender, RoutedEventArgs e)
+    {
+        Delete_Button.Visibility = Visibility.Collapsed;
+        MainWindow mainWindow = GetWindow.GetMainWindow();
+        TeacherPage teacherPage = GetWindow.GetTeacherPage(mainWindow.PageNavigator);
+        teacherPage.wrp_Teacher.Children.Remove(this);
+    }
+
+    private void Update_Button_Click(object sender, RoutedEventArgs e)
+    {
+        Update_Button.Visibility = Visibility.Collapsed;
     }
 }

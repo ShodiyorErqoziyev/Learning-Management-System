@@ -1,4 +1,5 @@
-﻿using LearningManagementSystem.Windows.Students;
+﻿using LearningManagementSystem.Constans;
+using LearningManagementSystem.Windows.Students;
 using Microsoft.Win32;
 using System;
 using System.Text.RegularExpressions;
@@ -26,25 +27,6 @@ public partial class StudentUpdatePage : Page
     {
         OpenFileDialog openFileDialog = new OpenFileDialog();
         return openFileDialog;
-    }
-
-    public static StudentViewWindow GetStudentWindow()
-    {
-        StudentViewWindow studentViewWindow = null!;
-
-        foreach (Window window in Application.Current.Windows)
-        {
-            Type type = typeof(StudentViewWindow);
-            if (window != null && window.DependencyObjectType.Name == type.Name)
-            {
-                studentViewWindow = (StudentViewWindow)window;
-                if (studentViewWindow != null)
-                {
-                    break;
-                }
-            }
-        }
-        return studentViewWindow!;
     }
 
     private void rbErkak_Click(object sender, RoutedEventArgs e)
@@ -94,7 +76,7 @@ public partial class StudentUpdatePage : Page
     private void Exit_Button_Click(object sender, RoutedEventArgs e)
     {
         StudentViewPage studentViewPage = new StudentViewPage();
-        StudentViewWindow studentViewWindow = GetStudentWindow();
+        StudentViewWindow studentViewWindow = GetWindow.GetStudentWindow();
         studentViewWindow.PageNavigator.Content = studentViewPage;
     }
 }

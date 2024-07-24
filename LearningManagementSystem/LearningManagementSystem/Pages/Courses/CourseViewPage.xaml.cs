@@ -1,4 +1,5 @@
-﻿using LearningManagementSystem.Windows.Course;
+﻿using LearningManagementSystem.Constans;
+using LearningManagementSystem.Windows.Course;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -42,7 +43,7 @@ public partial class CourseViewPage : Page
     {
         CourseAllLessonsPage courseAllLessonsPage = new CourseAllLessonsPage();
 
-        CourseViewWindow courseViewWindow = GetCourseViewWindow();
+        CourseViewWindow courseViewWindow = GetWindow.GetCourseViewWindow();
         courseViewWindow.PageNavigator.Content = courseAllLessonsPage;
     }
 
@@ -50,7 +51,7 @@ public partial class CourseViewPage : Page
     {
         CourseAllStudentsPage courseAllStudentsPage = new CourseAllStudentsPage();
 
-        CourseViewWindow courseViewWindow = GetCourseViewWindow();
+        CourseViewWindow courseViewWindow = GetWindow.GetCourseViewWindow();
         courseViewWindow.PageNavigator.Content = courseAllStudentsPage;
     }
 
@@ -58,26 +59,8 @@ public partial class CourseViewPage : Page
     {
         CourseDescriptionPage courseDescriptionPage = new CourseDescriptionPage();
 
-        CourseViewWindow courseViewWindow = GetCourseViewWindow();
+        CourseViewWindow courseViewWindow = GetWindow.GetCourseViewWindow();
         courseViewWindow.PageNavigator.Content = courseDescriptionPage;
     }
 
-    public static CourseViewWindow GetCourseViewWindow()
-    {
-        CourseViewWindow courseViewWindow = null!;
-
-        foreach (Window window in Application.Current.Windows)
-        {
-            Type type = typeof(CourseViewWindow);
-            if (window != null && window.DependencyObjectType.Name == type.Name)
-            {
-                courseViewWindow = (CourseViewWindow)window;
-                if (courseViewWindow != null)
-                {
-                    break;
-                }
-            }
-        }
-        return courseViewWindow!;
-    }
 }
