@@ -3,6 +3,7 @@ using System;
 using System.Windows;
 using static LearningManagementSystem.Windows.BlurWindow.BlurEffect;
 using System.Windows.Interop;
+using LearningManagementSystem.Pages.Teachers;
 
 namespace LearningManagementSystem.Windows.Teachers;
 
@@ -48,5 +49,9 @@ public partial class TeacherViewWindow : Window
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
         EnableBlur();
+
+        TeacherViewPage teacherViewPage = new TeacherViewPage();
+        PageNavigator.Content = teacherViewPage;
+
     }
 }

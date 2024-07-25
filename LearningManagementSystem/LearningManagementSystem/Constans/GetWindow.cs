@@ -1,6 +1,7 @@
 ﻿using LearningManagementSystem.Pages;
 using LearningManagementSystem.Windows.Course;
 using LearningManagementSystem.Windows.Students;
+using LearningManagementSystem.Windows.Teachers;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,6 +10,7 @@ namespace LearningManagementSystem.Constans;
 
 public class GetWindow
 {
+    #region**************** GetWindow *********************
     public static MainWindow GetMainWindow()
     {
         MainWindow mainWindow = null!;
@@ -65,6 +67,28 @@ public class GetWindow
         }
         return courseViewWindow!;
     }
+
+    public static TeacherViewWindow GetTeacherViewWindow()
+    {
+        TeacherViewWindow teacherViewWindow = null!;
+
+        foreach (Window window in Application.Current.Windows)
+        {
+            Type type = typeof(TeacherViewWindow);
+            if (window != null && window.DependencyObjectType.Name == type.Name)
+            {
+                teacherViewWindow = (TeacherViewWindow)window;
+                if (teacherViewWindow != null)
+                {
+                    break;
+                }
+            }
+        }
+        return teacherViewWindow!;
+    }
+
+    #endregion
+    ///////////////////////////////////////////////////////////////////////////////////////
 
     public static TeacherPage GetTeacherPage(Frame frame)
     {

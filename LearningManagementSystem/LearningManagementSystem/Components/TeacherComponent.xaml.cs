@@ -2,6 +2,7 @@
 using LearningManagementSystem.Pages;
 using LearningManagementSystem.Windows;
 using LearningManagementSystem.Windows.Students;
+using LearningManagementSystem.Windows.Teachers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -36,7 +37,8 @@ public partial class TeacherComponent : UserControl
 
     private void Teacher_Component_MouseDown(object sender, MouseButtonEventArgs e)
     {
-
+        TeacherViewWindow teacherViewWindow = new TeacherViewWindow();
+        teacherViewWindow.ShowDialog();
     }
 
     private void Action_Button_Click(object sender, RoutedEventArgs e)
