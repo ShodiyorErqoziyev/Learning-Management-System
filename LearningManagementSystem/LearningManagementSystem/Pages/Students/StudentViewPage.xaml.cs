@@ -1,4 +1,5 @@
-﻿using LearningManagementSystem.Windows;
+﻿using LearningManagementSystem.Constans;
+using LearningManagementSystem.Windows;
 using LearningManagementSystem.Windows.Students;
 using System;
 using System.Windows;
@@ -23,28 +24,9 @@ public partial class StudentViewPage : Page
     private void Update_Button_Click(object sender, RoutedEventArgs e)
     {
         StudentUpdatePage studentUpdatePage = new StudentUpdatePage();
-        StudentViewWindow studentViewWindow = GetStudentWindow();
+        StudentViewWindow studentViewWindow = GetWindow.GetStudentWindow();
         studentViewWindow.PageNavigator.Content = studentUpdatePage;
         
-    }
-
-    public static StudentViewWindow GetStudentWindow()
-    {
-        StudentViewWindow studentViewWindow = null!;
-
-        foreach (Window window in Application.Current.Windows)
-        {
-            Type type = typeof(StudentViewWindow);
-            if (window != null && window.DependencyObjectType.Name == type.Name)
-            {
-                studentViewWindow = (StudentViewWindow)window;
-                if (studentViewWindow != null)
-                {
-                    break;
-                }
-            }
-        }
-        return studentViewWindow!;
     }
 
     private void Delete_Student_Button_Click(object sender, RoutedEventArgs e)
@@ -55,7 +37,7 @@ public partial class StudentViewPage : Page
         var result = messageBox.ShowDialog();
         if (result == true)
         {
-            StudentViewWindow studentViewWindow = GetStudentWindow();
+            StudentViewWindow studentViewWindow = GetWindow.GetStudentWindow();
             studentViewWindow.Close();
         }
 

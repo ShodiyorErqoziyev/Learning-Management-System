@@ -1,4 +1,4 @@
-﻿<Window x:Class="LearningManagementSystem.Windows.Course.CourseViewWindow"
+﻿<Window x:Class="LearningManagementSystem.Windows.Teachers.TeacherViewWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -9,9 +9,7 @@
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         Background="Transparent"
-        Loaded="Window_Loaded"
-        Title="CourseViewWindow">
-
+        Loaded="Window_Loaded">
     <Border
         Height="700"
         Width="600"
@@ -33,15 +31,15 @@
 
             <Border
                 Grid.Row="1">
-                
+
                 <Frame
                     Name="PageNavigator"
                     NavigationUIVisibility="Hidden"/>
-                
+
             </Border>
 
         </Grid>
-        
+
         <Border.Effect>
             <DropShadowEffect
                 BlurRadius="5"
@@ -53,5 +51,4 @@
         </Border.Effect>
 
     </Border>
-    
 </Window>

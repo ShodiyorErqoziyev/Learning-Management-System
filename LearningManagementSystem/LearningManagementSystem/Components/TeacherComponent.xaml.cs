@@ -1,9 +1,12 @@
 ﻿using LearningManagementSystem.Constans;
 using LearningManagementSystem.Pages;
+using LearningManagementSystem.Windows;
+using LearningManagementSystem.Windows.Students;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using static LearningManagementSystem.Windows.MessageBoxWindow;
 
 namespace LearningManagementSystem.Components;
 
@@ -14,6 +17,7 @@ public partial class TeacherComponent : UserControl
 {
 
     private bool action_button = false;
+    string message = string.Empty;
 
     public TeacherComponent()
     {
@@ -76,10 +80,17 @@ public partial class TeacherComponent : UserControl
 
     private void Delete_Button_Click(object sender, RoutedEventArgs e)
     {
-        Delete_Button.Visibility = Visibility.Collapsed;
-        MainWindow mainWindow = GetWindow.GetMainWindow();
-        TeacherPage teacherPage = GetWindow.GetTeacherPage(mainWindow.PageNavigator);
-        teacherPage.wrp_Teacher.Children.Remove(this);
+        message = Teacher_Firstname.Content.ToString() + " " + Teacher_Lastname.Content.ToString() + "ni o'chirmoqchimisiz?";
+        var messageBox = new MessageBoxWindow(message, MessageType.Confirmation, MessageButtons.OkCancel);
+        var result = messageBox.ShowDialog();
+        if (result == true)
+        {
+            Delete_Button.Visibility = Visibility.Collapsed;
+            MainWindow mainWindow = GetWindow.GetMainWindow();
+            TeacherPage teacherPage = GetWindow.GetTeacherPage(mainWindow.PageNavigator);
+            teacherPage.wrp_Teacher.Children.Remove(this);
+        }
+        
     }
 
     private void Update_Button_Click(object sender, RoutedEventArgs e)
