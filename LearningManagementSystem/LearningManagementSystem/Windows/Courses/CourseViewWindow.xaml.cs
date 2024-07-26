@@ -13,6 +13,9 @@ namespace LearningManagementSystem.Windows.Course;
 /// </summary>
 public partial class CourseViewWindow : Window
 {
+
+    public int index = 0;
+
     public CourseViewWindow()
     {
         InitializeComponent();
@@ -45,8 +48,17 @@ public partial class CourseViewWindow : Window
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
         EnableBlur();
-        CourseViewPage courseViewPage = new CourseViewPage();
-        PageNavigator.Content = courseViewPage;
+
+        if(index == 2)
+        {
+            CourseViewPage courseViewPage = new CourseViewPage();
+            PageNavigator.Content = courseViewPage;
+        }else if(index == 1) 
+        {
+            CouseUpdatePage couseUpdatePage = new CouseUpdatePage();
+            PageNavigator.Content = couseUpdatePage;
+        }
+        
     }
 
     private void btnClose_Click(object sender, RoutedEventArgs e)

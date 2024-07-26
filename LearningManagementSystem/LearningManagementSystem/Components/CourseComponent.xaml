@@ -65,6 +65,7 @@
             
 
             <Label
+                Name="Course_Name"
                 HorizontalAlignment="Center"
                 Content="Dot Net"
                 FontSize="20"

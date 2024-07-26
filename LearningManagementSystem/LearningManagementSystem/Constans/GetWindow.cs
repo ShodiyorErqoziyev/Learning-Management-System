@@ -86,6 +86,7 @@ public class GetWindow
         return teacherViewWindow!;
     }
 
+
     ///////////////////////////////////////////////////////////////////////////////////////
 
     public static TeacherPage GetTeacherPage(Frame frame)
@@ -102,6 +103,15 @@ public class GetWindow
         if (frame.Content is StudentPage studentPage)
         {
             return studentPage;
+        }
+        return null!;
+    }
+
+    public static CoursePage GetCoursePage(Frame frame)
+    {
+        if (frame.Content is CoursePage coursePage)
+        {
+            return coursePage;
         }
         return null!;
     }
