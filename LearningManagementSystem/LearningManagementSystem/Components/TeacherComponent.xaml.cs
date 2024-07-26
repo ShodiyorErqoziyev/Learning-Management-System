@@ -1,7 +1,6 @@
 ﻿using LearningManagementSystem.Constans;
 using LearningManagementSystem.Pages;
 using LearningManagementSystem.Windows;
-using LearningManagementSystem.Windows.Students;
 using LearningManagementSystem.Windows.Teachers;
 using System.Windows;
 using System.Windows.Controls;
@@ -38,6 +37,7 @@ public partial class TeacherComponent : UserControl
     private void Teacher_Component_MouseDown(object sender, MouseButtonEventArgs e)
     {
         TeacherViewWindow teacherViewWindow = new TeacherViewWindow();
+        teacherViewWindow.index = 1;
         teacherViewWindow.ShowDialog();
     }
 
@@ -82,12 +82,15 @@ public partial class TeacherComponent : UserControl
 
     private void Delete_Button_Click(object sender, RoutedEventArgs e)
     {
+        Delete_Button.Visibility = Visibility.Collapsed;
+        Update_Button.Visibility = Visibility.Collapsed;
+
         message = Teacher_Firstname.Content.ToString() + " " + Teacher_Lastname.Content.ToString() + "ni o'chirmoqchimisiz?";
+
         var messageBox = new MessageBoxWindow(message, MessageType.Confirmation, MessageButtons.OkCancel);
         var result = messageBox.ShowDialog();
         if (result == true)
         {
-            Delete_Button.Visibility = Visibility.Collapsed;
             MainWindow mainWindow = GetWindow.GetMainWindow();
             TeacherPage teacherPage = GetWindow.GetTeacherPage(mainWindow.PageNavigator);
             teacherPage.wrp_Teacher.Children.Remove(this);
@@ -97,6 +100,10 @@ public partial class TeacherComponent : UserControl
 
     private void Update_Button_Click(object sender, RoutedEventArgs e)
     {
+        Delete_Button.Visibility = Visibility.Collapsed;
         Update_Button.Visibility = Visibility.Collapsed;
+        TeacherViewWindow teacherViewWindow = new TeacherViewWindow();
+        teacherViewWindow.index = 2;
+        teacherViewWindow.ShowDialog();
     }
 }

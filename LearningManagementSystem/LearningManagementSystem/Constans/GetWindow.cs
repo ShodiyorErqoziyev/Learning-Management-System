@@ -10,7 +10,6 @@ namespace LearningManagementSystem.Constans;
 
 public class GetWindow
 {
-    #region**************** GetWindow *********************
     public static MainWindow GetMainWindow()
     {
         MainWindow mainWindow = null!;
@@ -87,7 +86,6 @@ public class GetWindow
         return teacherViewWindow!;
     }
 
-    #endregion
     ///////////////////////////////////////////////////////////////////////////////////////
 
     public static TeacherPage GetTeacherPage(Frame frame)
@@ -95,6 +93,15 @@ public class GetWindow
         if (frame.Content is TeacherPage teacherPage)
         {
             return teacherPage;
+        }
+        return null!;
+    }
+
+    public static StudentPage GetStudentPage(Frame frame)
+    {
+        if (frame.Content is StudentPage studentPage)
+        {
+            return studentPage;
         }
         return null!;
     }

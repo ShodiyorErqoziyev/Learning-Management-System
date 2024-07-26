@@ -29,6 +29,7 @@ public partial class StudentComponent : UserControl
     private void Other_Button_Click(object sender, RoutedEventArgs e)
     {
         StudentViewWindow studentViewWindow = new StudentViewWindow();
+        studentViewWindow.studentComponent = this;
         studentViewWindow.ShowDialog();
     }
 }

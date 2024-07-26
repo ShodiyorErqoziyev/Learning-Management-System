@@ -1,7 +1,7 @@
-﻿using LearningManagementSystem.Constans;
+﻿using LearningManagementSystem.Components;
+using LearningManagementSystem.Constans;
 using LearningManagementSystem.Windows;
 using LearningManagementSystem.Windows.Students;
-using System;
 using System.Windows;
 using System.Windows.Controls;
 using static LearningManagementSystem.Windows.MessageBoxWindow;
@@ -13,7 +13,7 @@ namespace LearningManagementSystem.Pages.Students;
 /// </summary>
 public partial class StudentViewPage : Page
 {
-
+    public StudentComponent studentComponent { get; set; }
     string message = string.Empty;
 
     public StudentViewPage()
@@ -37,6 +37,9 @@ public partial class StudentViewPage : Page
         var result = messageBox.ShowDialog();
         if (result == true)
         {
+            MainWindow mainWindow = GetWindow.GetMainWindow();
+            StudentPage studentPage = GetWindow.GetStudentPage(mainWindow.PageNavigator);
+            studentPage.wrp_Students.Children.Remove(studentComponent);
             StudentViewWindow studentViewWindow = GetWindow.GetStudentWindow();
             studentViewWindow.Close();
         }

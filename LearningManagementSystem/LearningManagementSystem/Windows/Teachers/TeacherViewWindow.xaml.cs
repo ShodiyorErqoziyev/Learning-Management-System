@@ -12,6 +12,7 @@ namespace LearningManagementSystem.Windows.Teachers;
 /// </summary>
 public partial class TeacherViewWindow : Window
 {
+    public int index = 0;
     public TeacherViewWindow()
     {
         InitializeComponent();
@@ -50,8 +51,17 @@ public partial class TeacherViewWindow : Window
     {
         EnableBlur();
 
-        TeacherViewPage teacherViewPage = new TeacherViewPage();
-        PageNavigator.Content = teacherViewPage;
+        if(index == 1)
+        {
+            TeacherViewPage teacherViewPage = new TeacherViewPage();
+            PageNavigator.Content = teacherViewPage;
+        }
+        else if(index == 2)
+        {
+            TeacherUpdatePage teacherUpdatePage = new TeacherUpdatePage();
+            PageNavigator.Content = teacherUpdatePage;
+        }
+
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using LearningManagementSystem.Pages.Students;
+﻿using LearningManagementSystem.Components;
+using LearningManagementSystem.Pages.Students;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows;
@@ -12,6 +13,7 @@ namespace LearningManagementSystem.Windows.Students;
 /// </summary>
 public partial class StudentViewWindow : Window
 {
+    public StudentComponent studentComponent { get; set; }
     public StudentViewWindow()
     {
         InitializeComponent();
@@ -51,6 +53,7 @@ public partial class StudentViewWindow : Window
         EnableBlur();
 
         StudentViewPage studentViewPage = new StudentViewPage();
+        studentViewPage.studentComponent = studentComponent;
         PageNavigator.Content = studentViewPage;
     }
 }
