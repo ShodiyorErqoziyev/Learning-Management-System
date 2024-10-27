@@ -8,6 +8,7 @@
         AllowsTransparency="True"
         Background="Transparent"
         WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded"
         Title="MainWindow" Height="750" Width="1250">
     <Border
         Background="{DynamicResource FirstColor}"
@@ -176,6 +177,7 @@
                                 Style="{DynamicResource PathButton}"
                                 Tag="{DynamicResource group}"/>-->
                             <RadioButton
+                                IsChecked="True"
                                 Click="rbCourse_Click"
                                 Style="{DynamicResource PathButton}"
                                 Tag="{DynamicResource course}"/>
