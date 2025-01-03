@@ -19,9 +19,15 @@ public partial class MainWindow : Window
 
     private async Task CheckForUpdates()
     {
-        using (var updateManager = await UpdateManager.GitHubUpdateManager("https://github.com/ShodiyorErqoziyev/Learning-Management-System-"))
+        try
         {
-            await updateManager.UpdateApp();
+            using (var result = await UpdateManager.GitHubUpdateManager("https://github.com/ShodiyorErqoziyev/Learning-Management-System"))
+            {
+                var release = await result.UpdateApp(); 
+            }
+        }
+        catch
+        {
         }
     }
 
